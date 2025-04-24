@@ -40,8 +40,20 @@
             text-align: center;
         }
 
+        mainnext {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
         main p {
             font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        mainnext p {
+            font-size: 1.3rem;
             line-height: 1.6;
         }
 
@@ -99,6 +111,494 @@
             <a href="https://app.numericalbuilding.com" target="_blank" >Try It Out</a>
         </div>
     </main>
+    <hr>
+    <div>
+        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Gradients -->
+              <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0F4B80;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#09090A;stop-opacity:1" />
+              </linearGradient>
+              
+              <!-- Animation paths -->
+              <path id="dataPath1" d="M 120,150 C 220,150 300,200 400,225" fill="none" stroke="none"/>
+              <path id="dataPath2" d="M 120,200 C 220,200 320,225 400,250" fill="none" stroke="none"/>
+              <path id="dataPath3" d="M 120,250 C 220,250 320,250 400,275" fill="none" stroke="none"/>
+              <path id="dataPath4" d="M 120,300 C 220,300 320,275 400,300" fill="none" stroke="none"/>
+              <path id="dataPath5" d="M 120,350 C 220,350 320,300 400,325" fill="none" stroke="none"/>
+              
+              <path id="resultPath1" d="M 530,250 C 580,250 620,130 680,130" fill="none" stroke="none"/>
+              <path id="resultPath2" d="M 530,250 C 580,250 620,210 680,210" fill="none" stroke="none"/>
+              <path id="resultPath3" d="M 530,250 C 580,250 620,290 680,290" fill="none" stroke="none"/>
+              
+              <!-- Filter for shadows -->
+              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+              </filter>
+            </defs>
+            
+            <!-- Background -->
+            <rect x="0" y="0" width="800" height="500" fill="#F4F4F8" />
+            
+            <!-- Company title -->
+            <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#09090A">NBI at a glance</text>
+            <text x="400" y="80" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#0F4B80">Transforming Unstructured Data into Building Models</text>
+            
+            <!-- Input data files -->
+            <g class="input-data">
+              <rect x="50" y="130" width="70" height="40" rx="5" fill="#0F4B80" filter="url(#shadow)">
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+              </rect>
+              <text x="85" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F4F4F8">PDFs</text>
+              
+              <rect x="50" y="180" width="70" height="40" rx="5" fill="#0F4B80" filter="url(#shadow)">
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s" repeatCount="indefinite"/>
+              </rect>
+              <text x="85" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F4F4F8">Excel Files</text>
+              
+              <rect x="50" y="230" width="70" height="40" rx="5" fill="#0F4B80" filter="url(#shadow)">
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+              </rect>
+              <text x="85" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F4F4F8">Emails</text>
+              
+              <rect x="50" y="280" width="70" height="40" rx="5" fill="#0F4B80" filter="url(#shadow)">
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3.2s" repeatCount="indefinite"/>
+              </rect>
+              <text x="85" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F4F4F8">Utility Bills</text>
+              
+              <rect x="50" y="330" width="70" height="40" rx="5" fill="#0F4B80" filter="url(#shadow)">
+                <animate attributeName="opacity" values="0.8;1;0.8" dur="3.7s" repeatCount="indefinite"/>
+              </rect>
+              <text x="85" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#F4F4F8">Audits</text>
+            </g>
+            
+            <g transform="translate(400, 250)">
+            <image href="images/numbuco_anim.gif" width="160" height="160" x="-75" y="-80" z="1"/>
+            <rect x="-40" y="90" width="90" height="30" rx="5" fill="#0F4B80"/>
+            <text x="5" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#EAD553">NBI</text>
+            </g>
+            
+            <!-- Output models - Building Visualization Section -->
+            <g transform="translate(680, 130)">
+              <!-- Section background with title -->
+              <rect x="-60" y="-30" width="140" height="320" rx="5" fill="#F4F4F8" filter="url(#shadow)"/>
+              <text x="10" y="-15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#09090A">It starts with a simulation</text>
+              <text x="10" y="-5" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#09090A">of your building</text>
+          
+              <!-- Chiller temperature line chart (first chart) -->
+              <g transform="translate(-40, 20)">
+                <text x="40" y="-5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#09090A">Chiller Temperatures</text>
+                
+                <!-- Axis lines -->
+                <line x1="0" y1="0" x2="0" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="0" y1="50" x2="80" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                <text x="-15" y="30" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A" transform="rotate(-90 -15,25)">&deg; F</text>
+                
+                <!-- Y-axis marks -->
+                <line x1="-2" y1="0" x2="0" y2="0" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="10" x2="0" y2="10" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="20" x2="0" y2="20" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="30" x2="0" y2="30" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="40" x2="0" y2="40" stroke="#A9ABAF" stroke-width="1"/>
+                
+                <!-- X-axis marks -->
+                <line x1="10" y1="50" x2="10" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="20" y1="50" x2="20" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="30" y1="50" x2="30" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="40" y1="50" x2="40" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="50" y1="50" x2="50" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="60" y1="50" x2="60" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="70" y1="50" x2="70" y2="52" stroke="#A9ABAF" stroke-width="1"/>
+                
+                <!-- Supply temp line -->
+                <polyline points="0,35 10,30 20,32 30,25 40,20 50,22 60,25 70,18 80,20" 
+                        fill="none" stroke="#EAD553" stroke-width="2"/>
+                
+                <!-- Return temp line -->
+                <polyline points="0,45 10,40 20,38 30,35 40,30 50,33 60,35 70,30 80,32" 
+                        fill="none" stroke="#0F4B80" stroke-width="2"/>
+                
+                <!-- Legend -->
+                <circle cx="15" cy="65" r="3" fill="#0F4B80"/>
+                <text x="20" y="67.5" font-family="Arial, sans-serif" font-size="7" fill="#09090A">Supply</text>
+                
+                <circle cx="50" cy="65" r="3" fill="#EAD553"/>
+                <text x="55" y="67.5" font-family="Arial, sans-serif" font-size="7" fill="#09090A">Return</text>
+              </g>
+          
+              <!-- Energy use bar chart (second chart) -->
+              <g transform="translate(-40, 110)">
+                <text x="40" y="-5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#09090A">Energy Use by Month</text>
+                
+                <!-- Axis lines -->
+                <line x1="0" y1="0" x2="0" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="0" y1="50" x2="80" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                <text x="-15" y="30" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A" transform="rotate(-90 -15,25)">kWh</text>
+                
+                <!-- Y-axis marks -->
+                <line x1="-2" y1="0" x2="0" y2="0" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="10" x2="0" y2="10" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="20" x2="0" y2="20" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="30" x2="0" y2="30" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="-2" y1="40" x2="0" y2="40" stroke="#A9ABAF" stroke-width="1"/>
+                
+                <!-- X-axis labels (abbreviated month names) -->
+                <text x="6" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">J</text>
+                <text x="18" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">F</text>
+                <text x="30" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">M</text>
+                <text x="42" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">A</text>
+                <text x="54" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">M</text>
+                <text x="66" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">J</text>
+                <text x="78" y="58" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">J</text>
+                
+                <!-- Bars -->
+                <rect x="3" y="20" width="6" height="30" fill="#0F4B80"/>
+                <rect x="15" y="10" width="6" height="40" fill="#0F4B80"/>
+                <rect x="27" y="15" width="6" height="35" fill="#0F4B80"/>
+                <rect x="39" y="25" width="6" height="25" fill="#0F4B80"/>
+                <rect x="51" y="5" width="6" height="45" fill="#EAD553"/>
+                <rect x="63" y="15" width="6" height="35" fill="#EAD553"/>
+                <rect x="75" y="30" width="6" height="20" fill="#EAD553"/>
+              </g>
+          
+              <!-- Occupancy heatmap (third chart) -->
+              <g transform="translate(-40, 200)">
+                <text x="40" y="-5" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#09090A">Zone Temp vs Avg Occ</text>
+                
+                <!-- Axis lines -->
+                <line x1="0" y1="0" x2="0" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                <line x1="0" y1="50" x2="80" y2="50" stroke="#A9ABAF" stroke-width="1"/>
+                
+                <!-- Axis labels -->
+                <text x="-15" y="30" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A" transform="rotate(-90 -15,25)">&deg; F</text>
+                <text x="40" y="62" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#09090A">Occupancy</text>
+                
+                <!-- Heatmap cells - 4x4 grid -->
+                <!-- Row 1 (highest temp) -->
+                <rect x="5" y="5" width="15" height="10" fill="#0F4B80" opacity="0.2"/>
+                <rect x="25" y="5" width="15" height="10" fill="#0F4B80" opacity="0.4"/>
+                <rect x="45" y="5" width="15" height="10" fill="#0F4B80" opacity="0.6"/>
+                <rect x="65" y="5" width="15" height="10" fill="#0F4B80" opacity="0.8"/>
+                
+                <!-- Row 2 -->
+                <rect x="5" y="17" width="15" height="10" fill="#0F4B80" opacity="0.3"/>
+                <rect x="25" y="17" width="15" height="10" fill="#0F4B80" opacity="0.5"/>
+                <rect x="45" y="17" width="15" height="10" fill="#EAD553" opacity="0.7"/>
+                <rect x="65" y="17" width="15" height="10" fill="#EAD553" opacity="0.9"/>
+                
+                <!-- Row 3 -->
+                <rect x="5" y="29" width="15" height="10" fill="#0F4B80" opacity="0.4"/>
+                <rect x="25" y="29" width="15" height="10" fill="#EAD553" opacity="0.6"/>
+                <rect x="45" y="29" width="15" height="10" fill="#EAD553" opacity="0.8"/>
+                <rect x="65" y="29" width="15" height="10" fill="#EAD553" opacity="1.0"/>
+                
+                <!-- Row 4 (lowest temp) -->
+                <rect x="5" y="41" width="15" height="10" fill="#0F4B80" opacity="0.5"/>
+                <rect x="25" y="41" width="15" height="10" fill="#0F4B80" opacity="0.7"/>
+                <rect x="45" y="41" width="15" height="10" fill="#0F4B80" opacity="0.9"/>
+                <rect x="65" y="41" width="15" height="10" fill="#0F4B80" opacity="0.3"/>
+                
+                <!-- Animated cell to show real-time data -->
+                <rect x="45" y="17" width="15" height="10" fill="#EAD553">
+                  <animate attributeName="opacity" values="0;0.9;0" dur="2s" repeatCount="indefinite"/>
+                </rect>
+              </g>
+            </g>
+            
+            <!-- Data flowing animation -->
+            <!-- PDF data -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
+                <mpath href="#dataPath1"/>
+              </animateMotion>
+            </circle>
+            
+            <!-- Excel data -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="0.6s">
+                <mpath href="#dataPath2"/>
+              </animateMotion>
+            </circle>
+            
+            <!-- Email data -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="1.2s">
+                <mpath href="#dataPath3"/>
+              </animateMotion>
+            </circle>
+            
+            <!-- Utility bill data -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="1.8s">
+                <mpath href="#dataPath4"/>
+              </animateMotion>
+            </circle>
+            
+            <!-- Audit data -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="2.4s">
+                <mpath href="#dataPath5"/>
+              </animateMotion>
+            </circle>
+            
+            <!-- Result data flowing to each chart -->
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="3s">
+                <mpath href="#resultPath1"/>
+              </animateMotion>
+            </circle>
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="3.5s">
+                <mpath href="#resultPath2"/>
+              </animateMotion>
+            </circle>
+            <circle r="4" fill="#EAD553">
+              <animateMotion dur="3s" repeatCount="indefinite" begin="4s">
+                <mpath href="#resultPath3"/>
+              </animateMotion>
+            </circle>
+          </svg>
+    </div>
+    <mainnext>
+    <p>The vast majority of companies in the building data space do everything backwards. They pitch a big dashboard or a one-size fits all set of solutions, and they immediately start trying to gather data. They get everything into one big virtual pile, hold onto it, stick up some charts, and well...wait.</p>
+    <p>They wait for the customer to come to them with a question, and once the customer does, they have to rummage through their messy data pile and mash things together hoping to make sense of it all.</p>
+    <p>What a waste! Wires were pulled, sensors installed, conversations had with IT, credentials shared, documents signed, so much time and money spent, and for what? No one knows, all they know is they wanted to monitor <i>something</i>. What gets measured gets managed, right? Right??? But what use was paying for this slick software if it can't answer a simple question? And why does the customer have to come up with all the questions anyway? The customer has a job to do!</p>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .building { fill: #F4F4F8; stroke: #0F4B80; stroke-width: 3; }
+        .computer { fill: #F4F4F8; stroke: #0F4B80; stroke-width: 3; }
+        .screen { fill: #09090A; stroke: #A9ABAF; stroke-width: 2; }
+        .title { font-family: Arial, sans-serif; font-size: 24px; fill: #09090A; text-anchor: middle; }
+        .shape { stroke: #09090A; stroke-width: 1; }
+        
+        @keyframes moveToMiddle {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(var(--tx), var(--ty)); }
+        }
+        
+        .animated-shape {
+        animation: moveToMiddle 3s ease-in-out forwards;
+        animation-delay: var(--delay);
+        }
+        
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        80% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+        
+        .screen-shape {
+        animation: fadeIn 4s ease-in-out forwards;
+        }
+    </style>
+    
+    <!-- Title -->
+    <text x="350" y="50">Most companies</text>
+    
+    <!-- Building on left -->
+    <rect x="50" y="100" width="200" height="250" class="building" />
+    <rect x="130" y="300" width="40" height="50" class="building" />
+    
+    <!-- Shapes inside building - arranged more orderly -->
+    <!-- Triangles - neatly arranged in a row -->
+    <polygon points="70,155 90,130 110,155" class="shape animated-shape" style="fill: #EAD553; --tx: 260; --ty: 60; --delay: 0.1s;" />
+    <polygon points="70,195 90,170 110,195" class="shape animated-shape" style="fill: #EAD553; --tx: 220; --ty: 0; --delay: 0.8s;" />
+    <polygon points="70,235 90,210 110,235" class="shape animated-shape" style="fill: #EAD553; --tx: 190; --ty: 30; --delay: 1.5s;" />
+    
+    <!-- Circles - aligned vertically -->
+    <circle cx="150" cy="155" r="15" class="shape animated-shape" style="fill: #0F4B80; --tx: 250; --ty: 20; --delay: 0.3s;" />
+    <circle cx="150" cy="195" r="15" class="shape animated-shape" style="fill: #0F4B80; --tx: 170; --ty: -20; --delay: 1.0s;" />
+    
+    <!-- Squares - aligned vertically -->
+    <rect x="190" y="140" width="30" height="30" class="shape animated-shape" style="fill: #A9ABAF; --tx: 180; --ty: 50; --delay: 0.5s;" />
+    <rect x="190" y="180" width="30" height="30" class="shape animated-shape" style="fill: #A9ABAF; --tx: 260; --ty: -10; --delay: 1.2s;" />
+    
+    <!-- Hexagons - aligned vertically -->
+    <polygon points="110,255 130,255 140,272 130,289 110,289 100,272" class="shape animated-shape" style="fill: #F4F4F8; --tx: 200; --ty: 35; --delay: 0.7s;" />
+    <polygon points="170,255 190,255 200,272 190,289 170,289 160,272" class="shape animated-shape" style="fill: #F4F4F8; --tx: 230; --ty: -30; --delay: 1.4s;" />
+    
+    <!-- Random shape pile in middle -->
+    <circle cx="350" cy="240" r="12" class="shape" style="fill: #0F4B80; opacity: 0.8;" />
+    <rect x="360" y="220" width="25" height="25" class="shape" style="fill: #A9ABAF; opacity: 0.8;" />
+    <polygon points="390,240 405,220 420,240" class="shape" style="fill: #EAD553; opacity: 0.8;" />
+    <polygon points="370,260 390,260 400,275 390,290 370,290 360,275" class="shape" style="fill: #F4F4F8; opacity: 0.8;" />
+    <circle cx="420" cy="270" r="15" class="shape" style="fill: #0F4B80; opacity: 0.8;" />
+    <rect x="330" y="280" width="30" height="30" class="shape" style="fill: #A9ABAF; opacity: 0.8;" />
+    <polygon points="375,210 395,210 405,227 395,244 375,244 365,227" class="shape" style="fill: #F4F4F8; opacity: 0.8;" />
+    <polygon points="340,200 360,170 380,200" class="shape" style="fill: #EAD553; opacity: 0.8;" />
+    <circle cx="400" cy="200" r="18" class="shape" style="fill: #0F4B80; opacity: 0.8;" />
+    
+    <!-- Computer on right -->
+    <rect x="550" y="150" width="200" height="150" class="computer" />
+    <rect x="570" y="170" width="160" height="100" class="screen" />
+    <rect x="630" y="300" width="40" height="10" class="computer" />
+    <rect x="610" y="310" width="80" height="5" class="computer" />
+    
+    <!-- Shapes on computer screen -->
+    <text x="610" y="290" style="fill: #0F4B80;" >Stinky Corp</text>
+    <polygon points="600,202 620,172 640,202" class="shape screen-shape" style="fill: #EAD553;" />
+    <circle cx="691" cy="198" r="15" class="shape screen-shape" style="fill: #0F4B80;" />
+    <rect x="685" y="220" width="30" height="30" class="shape screen-shape" style="fill: #A9ABAF;" />
+    <image class="screen-shape" href="images/stinky.png" x="572" y="200" width="100" height="75" />
+    </svg>
+    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .building { fill: #F4F4F8; stroke: #0F4B80; stroke-width: 3; }
+        .computer { fill: #F4F4F8; stroke: #0F4B80; stroke-width: 3; }
+        .screen { fill: #09090A; stroke: #A9ABAF; stroke-width: 2; }
+        .title { font-family: Arial, sans-serif; font-size: 24px; fill: #09090A; text-anchor: middle; }
+        .shape { stroke: #09090A; stroke-width: 1; }
+        
+        @keyframes drawLine {
+        0% { stroke-dashoffset: 1000; opacity: 0; }
+        20% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 1; }
+        }
+        
+        .outline {
+        fill: transparent;
+        stroke-width: 2;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: drawLine 4s ease-in-out forwards;
+        animation-delay: var(--delay);
+        }
+        
+        @keyframes fillShape {
+        0% { opacity: 0; }
+        50% { opacity: 0; }
+        100% { opacity: 0.5; }
+        }
+        
+        .outline-shape {
+        opacity: 0;
+        animation: fillShape 4s ease-in-out forwards;
+        animation-delay: var(--delay);
+        }
+        
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        80% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+        
+        .screen-content {
+        animation: fadeIn 5s ease-in-out forwards;
+        }
+    </style>
+    
+    <!-- Title -->
+    <text x="400" y="50">Us</text>
+    
+    <!-- Building on left -->
+    <rect x="50" y="100" width="200" height="250" class="building" />
+    <rect x="130" y="300" width="40" height="50" class="building" />
+    
+    <!-- Shapes inside building - arranged more orderly -->
+    <!-- Triangles - neatly arranged in a row -->
+    <polygon points="70,155 90,130 110,155" class="shape" style="fill: #EAD553;" />
+    <polygon points="70,195 90,170 110,195" class="shape" style="fill: #EAD553;" />
+    <polygon points="70,235 90,210 110,235" class="shape" style="fill: #EAD553;" />
+    
+    <!-- Circles - aligned vertically -->
+    <circle cx="150" cy="155" r="15" class="shape" style="fill: #0F4B80;" />
+    <circle cx="150" cy="195" r="15" class="shape" style="fill: #0F4B80;" />
+    
+    <!-- Squares - aligned vertically -->
+    <rect x="190" y="140" width="30" height="30" class="shape" style="fill: #A9ABAF;" />
+    <rect x="190" y="180" width="30" height="30" class="shape" style="fill: #A9ABAF;" />
+    
+    <!-- Hexagons - aligned vertically -->
+    <polygon points="110,255 130,255 140,272 130,289 110,289 100,272" class="shape" style="fill: #F4F4F8;" />
+    <polygon points="170,255 190,255 200,272 190,289 170,289 160,272" class="shape" style="fill: #F4F4F8;" />
+    
+    <!-- Building outline in middle - now with dashed gray lines -->
+    <rect x="330" y="100" width="200" height="250" class="outline" style="--delay: 0.2s; stroke: #A9ABAF; stroke-dasharray: 5,5;" />
+    <rect x="410" y="300" width="40" height="50" class="outline" style="--delay: 1.0s; stroke: #A9ABAF; stroke-dasharray: 5,5;" />
+    <rect x="370" y="120" width="40" height="40" class="outline" style="--delay: 1.5s; stroke: #A9ABAF; stroke-dasharray: 5,5;" rx="5" />
+    <rect x="450" y="120" width="40" height="40" class="outline" style="--delay: 2.0s; stroke: #A9ABAF; stroke-dasharray: 5,5;" rx="5" />
+    
+    <!-- Shapes inside outline building - arranged more orderly with dashed gray lines -->
+    <!-- Triangles - neatly arranged in a row -->
+    <polygon points="350,155 370,130 390,155" class="shape outline-shape" style="fill: #EAD553; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.2s;" />
+    <polygon points="350,195 370,170 390,195" class="shape outline-shape" style="fill: #EAD553; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.3s;" />
+    <polygon points="350,235 370,210 390,235" class="shape outline-shape" style="fill: #EAD553; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.4s;" />
+    
+    <!-- Circles - aligned vertically -->
+    <circle cx="430" cy="155" r="15" class="shape outline-shape" style="fill: #0F4B80; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.6s;" />
+    <circle cx="430" cy="195" r="15" class="shape outline-shape" style="fill: #0F4B80; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.7s;" />
+    
+    <!-- Squares - aligned vertically -->
+    <rect x="470" y="140" width="30" height="30" class="shape outline-shape" style="fill: #A9ABAF; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 2.9s;" />
+    <rect x="470" y="180" width="30" height="30" class="shape outline-shape" style="fill: #A9ABAF; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 3.0s;" />
+    
+    <!-- Hexagons - aligned vertically -->
+    <polygon points="390,255 410,255 420,272 410,289 390,289 380,272" class="shape outline-shape" style="fill: #F4F4F8; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 3.2s;" />
+    <polygon points="450,255 470,255 480,272 470,289 450,289 440,272" class="shape outline-shape" style="fill: #F4F4F8; stroke: #A9ABAF; stroke-dasharray: 3,3; --delay: 3.3s;" />
+    
+    <!-- Computer on right -->
+    
+    <rect x="550" y="150" width="200" height="150" class="computer" />
+    <rect x="570" y="170" width="160" height="100" class="screen" />
+    <rect x="630" y="300" width="40" height="10" class="computer" />
+    <rect x="610" y="310" width="80" height="5" class="computer" />
+    <text x="638" y="290" style="fill: #0F4B80;" >NBI</text>
+    
+    
+    
+    <!-- Shapes on computer screen -->
+    <g class="screen-content">
+        <!-- <image href="images/nostinky.png" x="555" y="170" width="160" height="100" /> -->
+        <!-- Mini building representation -->
+        <rect x="580" y="180" width="40" height="50" style="fill: #dbdde0; stroke: #A9ABAF; stroke-width: 1;" />
+        <rect x="580" y="180" width="40" height="40" style="fill: #dbdde0; stroke: #A9ABAF; stroke-width: 1;" />
+        <rect x="580" y="180" width="40" height="30" style="fill: #dbdde0; stroke: #A9ABAF; stroke-width: 1;" />
+        <rect x="580" y="180" width="40" height="20" style="fill: #dbdde0; stroke: #A9ABAF; stroke-width: 1;" />
+        <rect x="580" y="180" width="40" height="10" style="fill: #dbdde0; stroke: #A9ABAF; stroke-width: 1;" />
+        
+        <image href="images/not_stinky.png" x="628" y="170" width="100" height="75" />
+        <polygon points="628,207 633,202 638,207" style="fill: #EAD553; stroke: #09090A; stroke-width: 0.5;" />
+        <circle cx="682" cy="205" r="3" style="fill: #0F4B80; stroke: #09090A; stroke-width: 0.5;" />
+        <rect x="628" y="232" width="6" height="6" style="fill: #A9ABAF; stroke: #09090A; stroke-width: 0.5;" />
+        <polygon points="680,232 683,232 684,235 683,238 680,238 679,235" style="fill: #F4F4F8; stroke: #09090A; stroke-width: 0.5;" />
+        <!-- Grouped by shape -->
+        <!-- Triangles group -->
+        <polygon points="582,207 587,202 592,207" style="fill: #EAD553; stroke: #09090A; stroke-width: 0.5;" />
+        <polygon points="582,197 587,192 592,197" style="fill: #EAD553; stroke: #09090A; stroke-width: 0.5;" />
+        <polygon points="582,187 587,182 592,187" style="fill: #EAD553; stroke: #09090A; stroke-width: 0.5;" />
+        
+        <!-- Circles group -->
+        <circle cx="600" cy="195" r="3" style="fill: #0F4B80; stroke: #09090A; stroke-width: 0.5;" />
+        <circle cx="600" cy="205" r="3" style="fill: #0F4B80; stroke: #09090A; stroke-width: 0.5;" />
+        
+        <!-- Squares group -->
+        <rect x="610" y="192" width="6" height="6" style="fill: #A9ABAF; stroke: #09090A; stroke-width: 0.5;" />
+        <rect x="610" y="202" width="6" height="6" style="fill: #A9ABAF; stroke: #09090A; stroke-width: 0.5;" />
+        
+        <!-- Hexagons group -->
+        <polygon points="593,212 596,212 597,215 596,218 593,218 592,215" style="fill: #F4F4F8; stroke: #09090A; stroke-width: 0.5;" />
+        <polygon points="603,212 606,212 607,215 606,218 603,218 602,215" style="fill: #F4F4F8; stroke: #09090A; stroke-width: 0.5;" />
+    </g>
+    </svg>
+    <p>That's why NBI starts simple. NBI ingests whatever information you have about your building, whether that is a brief description, a spec document, a retrocommissioning report, or a smattering of bills and Excel files. It then turns this unstructured data in a minimal simulation of your building.</p>
+    <p>This minimal simulation, ideally coupled with some utility data, let's NBI start identifying usage and cost anomalies, generating operational questions, and slowly proposing avenues for further exploration. When something looks promising, you can add real, live data at your own pace as need arises. The simulation will tune to the live data and improve in real time, and so too will analytics and ECM proposals.</p>
+    <p>You can even suggest alternative scenarios to explore, and NBI will not only generate them for, but show you potential savings, suggest the right live data to gather to improve estimates, and show you how to get a project paid for.</p>
+    <p>Our software supports and enables all the usual suspects:</p>
+    <ul>
+        <li>Energy management</li>
+        <li>Tenant meter monitoring and billing</li>
+        <li>Compliance</li>
+        <li>BMS integration</li>
+        <li>Demand response</li>
+        <li>ECM recommendation and incentive application</li>
+        <li>and so much more!</li>
+    </ul>
+    <p>The difference is, we don't try to bombard you out of the gate. Start simple, and grow into the software as you need it. Our engine will help you figure out if a given offering is even worthwhile, and when it is, we'll help you figure out which sensors, partners, and data are worth paying for, which ones aren't, and which ones you can get paid for.</p> 
+
+    <p>If this sounds exciting, reach out!</p>
+    </mainnext>
 
     <footer>
         <p>&copy; 2025 The Numerical Building Corporation. All rights reserved.</p>
