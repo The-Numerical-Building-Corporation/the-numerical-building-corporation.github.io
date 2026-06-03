@@ -211,7 +211,16 @@ nav a.active {
 .section-merge h3 {
     color: #EAD553;
     font-size: 1.6rem;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
+}
+
+.merge-sub {
+    margin: 0;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #f4f4f8;
+    opacity: 0.75;
 }
 
 .section-merge p {
