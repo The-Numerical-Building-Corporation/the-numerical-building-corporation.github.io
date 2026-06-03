@@ -1,0 +1,688 @@
+/* ===== Base / Reset ===== */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f8;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #2b2b2b;
+    color: #f4f4f8;
+    padding: 20px 10px 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header > p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+
+/* ===== Navigation ===== */
+nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f4f4f8;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #0f4c81;
+}
+
+/* ===== Main content areas ===== */
+.hero {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.content {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #09090A;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+    color: #0f4c81;
+    margin-top: 35px;
+    margin-bottom: 8px;
+}
+
+.content ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding-left: 25px;
+}
+
+/* ===== Engine intro + diagram (kept tight together) ===== */
+.engine-intro {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.engine-diagram {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+}
+
+.engine-diagram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ===== Page hero (for sub-pages) ===== */
+.page-hero {
+    max-width: 800px;
+    margin: 40px auto 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.page-hero h2 {
+    font-size: 2rem;
+    color: #09090A;
+    margin: 0 0 10px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ===== Section cards (for linking to sub-sections) ===== */
+.section-cards {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.section-card {
+    flex: 1 1 150px;
+    max-width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    background: #fff;
+    border: 1px solid #dbdde0;
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s,
+                transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+}
+
+.section-card:hover {
+    border-color: #0f4c81;
+    box-shadow: 0 2px 12px rgba(15, 76, 129, 0.12);
+}
+
+/* ===== "For Everyone" merge interaction ===== */
+/* On hovering anywhere in the row, all the buttons fade and shrink toward
+   the center while a single button expands in over them. */
+.section-cards:hover .section-card {
+    opacity: 0;
+    transform: scale(0.85);
+    border-color: #dbdde0;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+/* The merged button overlay */
+.section-merge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #0f4c81;
+    border-radius: 8px;
+    box-shadow: 0 6px 22px rgba(15, 76, 129, 0.22);
+    opacity: 0;
+    transform: scaleX(0.5);
+    pointer-events: none;
+    transition: opacity 0.35s ease 0.08s,
+                transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-cards:hover .section-merge {
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+}
+
+.section-merge h3 {
+    color: #EAD553;
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+}
+
+.section-merge p {
+    color: #f4f4f8;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 440px;
+}
+
+.section-card h3 {
+    font-size: 1.02rem;
+    color: #0f4c81;
+    margin: 0;
+    line-height: 1.25;
+}
+
+/* ===== CTA ===== */
+.cta {
+    margin: 30px 0;
+}
+
+.cta a {
+    display: inline-block;
+    background-color: #0f4c81;
+    color: #f4f4f8;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.cta a:hover {
+    background-color: #0a3559;
+}
+
+/* ===== Dividers ===== */
+hr {
+    border: none;
+    border-top: 1px solid #dbdde0;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+/* ===== Sub-section divider ===== */
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #EAD553;
+    border: none;
+    margin: 50px auto 40px;
+    border-radius: 2px;
+}
+
+/* ===== Pricing tiers ===== */
+.tiers {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.tiers-title {
+    font-size: 2rem;
+    color: #09090A;
+    margin: 0 0 8px;
+}
+
+.tiers-sub {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto 35px;
+}
+
+.tier-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.tier {
+    flex: 1 1 260px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #dbdde0;
+    border-radius: 10px;
+    padding: 32px 26px 28px;
+    text-align: left;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.tier:hover {
+    border-color: #0f4c81;
+    box-shadow: 0 4px 18px rgba(15, 76, 129, 0.14);
+    transform: translateY(-3px);
+}
+
+/* Blackboard-bold glyph (Q, R, C) in the Numerical Building style */
+.tier-glyph {
+    font-family: 'Cambria Math', 'Latin Modern Math', Georgia, 'Times New Roman', serif;
+    font-size: 3.4rem;
+    line-height: 1;
+    color: #0f4c81;
+    display: block;
+    margin-bottom: 14px;
+    /* subtle yellow underglow to echo the brand accent */
+    text-shadow: 2px 2px 0 rgba(234, 213, 83, 0.55);
+}
+
+.tier h3 {
+    font-size: 1.35rem;
+    color: #09090A;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.tier-blurb {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 22px;
+    flex-grow: 1;
+}
+
+.tier-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f4c81;
+    margin: 0;
+}
+
+.tier-price span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #777;
+    white-space: nowrap;
+}
+
+.tier-price-contact a {
+    display: inline-block;
+    background-color: #0f4c81;
+    color: #f4f4f8;
+    text-decoration: none;
+    padding: 10px 22px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.tier-price-contact a:hover {
+    background-color: #0a3559;
+}
+
+/* Featured (middle) tier */
+.tier-featured {
+    border-color: #0f4c81;
+    border-width: 2px;
+    position: relative;
+}
+
+.tier-featured .tier-glyph {
+    color: #0f4c81;
+    text-shadow: 2px 2px 0 rgba(234, 213, 83, 0.85);
+}
+
+/* ===== Narrative scenes (questions / live data / answers) ===== */
+.scene {
+    max-width: 920px;
+    margin: 8px auto;
+    padding: 18px 20px;
+}
+
+.scene-caption {
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #09090A;
+    max-width: 640px;
+    margin: 0 auto 24px;
+}
+
+.scene-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.engine-core {
+    flex: 0 0 auto;
+    width: 170px;
+    text-align: center;
+}
+
+.engine-core img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+.engine-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #f4f4f8;
+    background: #0f4c81;
+    border-radius: 5px;
+    padding: 4px 12px;
+    margin-top: -6px;
+}
+
+.bubbles {
+    flex: 1 1 380px;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bubble {
+    background: #fff;
+    border: 1px solid #c9ccd2;
+    border-left: 3px solid #EAD553;
+    border-radius: 0;
+    padding: 16px 18px;
+    box-shadow: none;
+}
+
+.bubble.answer {
+    border-left-color: #0f4c81;
+}
+
+.bubble-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
+}
+
+.bubble-text strong {
+    color: #0f4c81;
+}
+
+.uchart {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 12px 0 2px;
+}
+
+.uchart-cap {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 0;
+}
+
+.bubble-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.chip {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 2px;
+    background: #0f4c81;
+    color: #f4f4f8;
+    cursor: pointer;
+}
+
+.chip.ghost {
+    background: transparent;
+    color: #0f4c81;
+    border: 1px solid #0f4c81;
+}
+
+.bubble-note {
+    font-size: 0.92rem;
+    font-style: italic;
+    color: #666;
+    margin: 12px 0 0;
+}
+
+.bubble-note + .bubble-cta {
+    margin-top: 6px;
+}
+
+.bubble-cta {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f4c81;
+    cursor: pointer;
+}
+
+.bubble-cta:hover {
+    text-decoration: underline;
+}
+
+.stat-row {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin: 14px 0 2px;
+}
+
+.stat .v {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f4c81;
+}
+
+.stat .k {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #777;
+}
+
+/* Live-data scene */
+.live-svg {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ===== Closing principles ===== */
+.principles {
+    max-width: 760px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.principles p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0 0 16px;
+}
+
+.principles .core-question {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #0f4c81;
+    margin: 24px 0 18px;
+}
+
+.question-ladder {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 460px;
+    text-align: left;
+}
+
+.question-ladder li {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #09090A;
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid #ececf1;
+}
+
+.question-ladder li:last-child {
+    border-bottom: none;
+}
+
+.question-ladder li::before {
+    content: "\2192";  /* → */
+    position: absolute;
+    left: 0;
+    color: #EAD553;
+    font-weight: 700;
+}
+
+/* Flowchart scene */
+.flow-svg {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* ===== Scroll-reveal animation ===== */
+.js .reveal {
+    opacity: 0;
+}
+
+.in-view .reveal {
+    animation: bubbleIn 0.6s ease forwards;
+    animation-delay: var(--d, 0s);
+}
+
+@keyframes bubbleIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.985); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.flow-line {
+    stroke-dasharray: 320;
+}
+
+.js .flow-line {
+    stroke-dashoffset: 320;
+}
+
+.in-view .flow-line {
+    animation: flowDraw 0.9s ease forwards 0.35s;
+}
+
+@keyframes flowDraw {
+    to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; }
+    .in-view .reveal { animation: none; }
+    .js .flow-line { stroke-dashoffset: 0; }
+    .in-view .flow-line { animation: none; }
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #2b2b2b;
+    color: #f4f4f8;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== Images ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* ===== Stub / Coming Soon ===== */
+.stub {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stub p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
