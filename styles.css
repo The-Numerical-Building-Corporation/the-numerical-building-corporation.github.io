@@ -168,44 +168,55 @@ nav a.active {
 }
 
 /* ===== "For Everyone" merge interaction ===== */
-/* On hovering anywhere in the row, all the buttons fade and shrink toward
-   the center while a single button expands in over them. */
-.section-cards:hover .section-card {
-    opacity: 0;
-    transform: scale(0.85);
-    border-color: #dbdde0;
-    box-shadow: none;
-    pointer-events: none;
-}
-
-/* The merged button overlay */
+/* Default (touch / no-hover devices): the role buttons stay put and a
+   static "For Everyone" button sits below the grid, so the punchline
+   still lands without a hover to trigger it. */
 .section-merge {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
+    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 30px;
+    padding: 22px 30px;
+    margin-top: 4px;
     text-align: center;
     text-decoration: none;
     background: #0f4c81;
     border-radius: 8px;
-    box-shadow: 0 6px 22px rgba(15, 76, 129, 0.22);
-    opacity: 0;
-    transform: scaleX(0.5);
-    pointer-events: none;
-    transition: opacity 0.35s ease 0.08s,
-                transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 22px rgba(15, 76, 129, 0.18);
 }
 
-.section-cards:hover .section-merge {
-    opacity: 1;
-    transform: scaleX(1);
-    pointer-events: auto;
+/* Hover-capable devices: hide it as an overlay and run the merge.
+   Hovering anywhere in the row fades the buttons toward center while
+   this single button expands in over them. */
+@media (hover: hover) and (pointer: fine) {
+    .section-merge {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        right: 20px;
+        margin-top: 0;
+        opacity: 0;
+        transform: scaleX(0.5);
+        pointer-events: none;
+        transition: opacity 0.35s ease 0.08s,
+                    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .section-cards:hover .section-card {
+        opacity: 0;
+        transform: scale(0.85);
+        border-color: #dbdde0;
+        box-shadow: none;
+        pointer-events: none;
+    }
+
+    .section-cards:hover .section-merge {
+        opacity: 1;
+        transform: scaleX(1);
+        pointer-events: auto;
+    }
 }
 
 .section-merge h3 {
@@ -221,14 +232,6 @@ nav a.active {
     letter-spacing: 0.04em;
     color: #f4f4f8;
     opacity: 0.75;
-}
-
-.section-merge p {
-    color: #f4f4f8;
-    font-size: 1.05rem;
-    line-height: 1.5;
-    margin: 0;
-    max-width: 440px;
 }
 
 .section-card h3 {
