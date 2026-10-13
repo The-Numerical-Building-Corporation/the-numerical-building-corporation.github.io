@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Numerical Building Corporation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="A calibrated physics model of your building, built from the data you already have and tuned with on-site measurement. Use it to run the building and plan capital work.">
+    <meta property="og:title" content="The Numerical Building Corporation">
+    <meta property="og:description" content="Your building, by the numbers. A calibrated model of your building, built from your data and tuned with on-site measurement.">
+    <meta property="og:image" content="https://numericalbuilding.com/images/numbuco.png">
+    <meta property="og:url" content="https://numericalbuilding.com/">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/numbuco.png">
     <link rel="stylesheet" href="styles.css">
     <script>document.documentElement.classList.add('js');</script>
@@ -16,32 +24,37 @@
     </header>
 
     <div class="hero">
-        <img width=375 height=375 src="images/numbuco.png" alt="Company Logo">
+        <img width=300 height=300 src="images/numbuco.png" alt="The Numerical Building Corporation logo">
+        <h2 class="hero-title">Your building's physics, measured and modeled.</h2>
         <p>
-            Minimum viable simulation from whatever information you happen to have lying around,
-            so you can start asking questions, generating reports, and saving energy and money
-            long before you ever integrate a single sensor or pull a single cable.
+            We build a calibrated model of your building from the data you already have and,
+            when you're ready, tune it with on-site measurement. Use it to run the building
+            day to day, understand your regulatory risk, and plan capital work.
         </p>
         <div class="cta">
-            <!-- <a href="https://app.numericalbuilding.com" target="_blank" >Try It Out</a> -->
-            <a href="#">Coming Soon!</a>
+            <a href="mailto:sales@numericalbuilding.com?subject=Numerical%20Building%20inquiry">Talk to sales</a>
+            <p class="cta-alt">or call <a href="tel:+18457640243">845-764-0243</a></p>
         </div>
     </div>
 
-    <p class="intro-lead" data-animate>Most of the building data space works backwards &mdash; install the sensors, pile up the data, stand up a dashboard, then wait for someone to ask a question. The Numerical Engine starts from the other end. Here's how it works.</p>
+    <section class="measure" data-animate>
+        <h2 class="reveal" style="--d:.05s">Built on measurement</h2>
+        <p class="reveal" style="--d:.15s">Most energy analysis is estimated from default tables: typical efficiencies, typical U&#8209;values, typical schedules. We measure. Equipment under real operating conditions, the building's own sensors and meters, and the envelope where it matters all go into a physics model of your site.</p>
+        <p class="reveal" style="--d:.25s">The numbers that come out describe the building that's actually there. Use them to tune operations and to plan capital work.</p>
+    </section>
 
-    <section class="walkthrough" data-animate>
+    <section class="walkthrough" data-animate aria-roledescription="carousel" aria-label="How the engine works">
         <div class="steps-nav" role="tablist" aria-label="How the engine works">
-            <button class="step-tab active" type="button" data-step="0"><span class="step-num">1</span> Ingest</button>
-            <button class="step-tab" type="button" data-step="1"><span class="step-num">2</span> Question</button>
-            <button class="step-tab" type="button" data-step="2"><span class="step-num">3</span> Refine</button>
-            <button class="step-tab" type="button" data-step="3"><span class="step-num">4</span> Decide</button>
+            <button class="step-tab active" type="button" role="tab" data-step="0"><span class="step-num">1</span> Ingest<span class="step-progress"></span></button>
+            <button class="step-tab" type="button" role="tab" data-step="1"><span class="step-num">2</span> Question<span class="step-progress"></span></button>
+            <button class="step-tab" type="button" role="tab" data-step="2"><span class="step-num">3</span> Measure<span class="step-progress"></span></button>
+            <button class="step-tab" type="button" role="tab" data-step="3"><span class="step-num">4</span> Decide<span class="step-progress"></span></button>
         </div>
 
         <div class="step-panels">
             <!-- Step 1: Ingest -->
-            <div class="step-panel active" data-step="0">
-                <p class="step-caption">Feed the engine whatever you already have &mdash; a description, a spec sheet, a retrocommissioning report, a few utility bills. It turns that unstructured pile into a structured, minimum viable model of your building.</p>
+            <div class="step-panel active" data-step="0" role="tabpanel">
+                <p class="step-caption">Start with what you have: utility bills, interval data, drawings, audits, spec sheets. The engine turns that pile into a structured, calibrated model of your building.</p>
                 <div class="step-visual">
                     <svg class="ingest-svg" viewBox="0 0 820 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unstructured documents flow into the engine and come out as a structured building model: windows, occupants, lighting and equipment landing on each floor">
                         <defs>
@@ -50,75 +63,75 @@
                             <path id="fp3" d="M70,176 C 180,176 250,185 298,194" fill="none"/>
                             <path id="fp4" d="M86,238 C 190,238 250,200 298,197" fill="none"/>
                             <path id="fp5" d="M72,300 C 180,300 250,228 298,200" fill="none"/>
-                            <g id="gBulb"><circle r="5" fill="#EAD553" stroke="#09090A" stroke-width="0.8"/><rect x="-2.5" y="4" width="5" height="3.5" rx="0.5" fill="#A9ABAF"/></g>
-                            <g id="gChiller"><rect x="-12" y="-8" width="24" height="16" rx="1" fill="#0F4B80"/><line x1="-8" y1="-4" x2="8" y2="-4" stroke="#F4F4F8" stroke-width="1"/><line x1="-8" y1="-1" x2="8" y2="-1" stroke="#F4F4F8" stroke-width="1"/><line x1="-8" y1="2" x2="8" y2="2" stroke="#F4F4F8" stroke-width="1"/><circle cx="0" cy="5" r="1.4" fill="#EAD553"/></g>
-                            <g id="gPerson" stroke="#0F4B80" stroke-width="1.6" stroke-linecap="round" fill="none"><circle cx="0" cy="-7" r="2.3" fill="#0F4B80" stroke="none"/><line x1="0" y1="-4.6" x2="0" y2="2"/><line x1="0" y1="-2.6" x2="-3" y2="0.6"/><line x1="0" y1="-2.6" x2="3" y2="0.6"/><line x1="0" y1="2" x2="-2.6" y2="7"/><line x1="0" y1="2" x2="2.6" y2="7"/></g>
-                            <g id="gFan"><circle r="10.5" fill="#0F4B80"/><circle r="10.5" fill="none" stroke="#0b3a63" stroke-width="1.4"/><g fill="#F4F4F8"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(72)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(144)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(216)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(288)"/></g><circle r="2.4" fill="#EAD553"/></g>
+                            <g id="gBulb"><circle r="5" fill="#BF9F2E" stroke="#1B2A38" stroke-width="0.8"/><rect x="-2.5" y="4" width="5" height="3.5" rx="0.5" fill="#A9ABAF"/></g>
+                            <g id="gChiller"><rect x="-12" y="-8" width="24" height="16" rx="1" fill="#123A60"/><line x1="-8" y1="-4" x2="8" y2="-4" stroke="#F4F4F8" stroke-width="1"/><line x1="-8" y1="-1" x2="8" y2="-1" stroke="#F4F4F8" stroke-width="1"/><line x1="-8" y1="2" x2="8" y2="2" stroke="#F4F4F8" stroke-width="1"/><circle cx="0" cy="5" r="1.4" fill="#BF9F2E"/></g>
+                            <g id="gPerson" stroke="#123A60" stroke-width="1.6" stroke-linecap="round" fill="none"><circle cx="0" cy="-7" r="2.3" fill="#123A60" stroke="none"/><line x1="0" y1="-4.6" x2="0" y2="2"/><line x1="0" y1="-2.6" x2="-3" y2="0.6"/><line x1="0" y1="-2.6" x2="3" y2="0.6"/><line x1="0" y1="2" x2="-2.6" y2="7"/><line x1="0" y1="2" x2="2.6" y2="7"/></g>
+                            <g id="gFan"><circle r="10.5" fill="#123A60"/><circle r="10.5" fill="none" stroke="#0B2942" stroke-width="1.4"/><g fill="#F4F4F8"><animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(72)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(144)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(216)"/><path d="M0,-2.2 C 4.2,-2.8 6.8,-5.6 5.8,-9.2 C 3.4,-8.6 1.2,-5.6 0,-2.2 Z" transform="rotate(288)"/></g><circle r="2.4" fill="#BF9F2E"/></g>
                         </defs>
 
                         <!-- left: unstructured documents -->
-                        <g font-family="Arial, sans-serif" text-anchor="middle">
+                        <g font-family="'Nunito Sans', Arial, sans-serif" text-anchor="middle">
                             <g transform="translate(34,30)">
                                 <g transform="rotate(-5 17 22)">
-                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#0F4B80" stroke-width="1.5"/>
+                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#123A60" stroke-width="1.5"/>
                                     <path d="M24,0 V10 H34 Z" fill="#A9ABAF"/>
                                     <line x1="6" y1="20" x2="28" y2="20" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="27" x2="28" y2="27" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="34" x2="22" y2="34" stroke="#A9ABAF" stroke-width="1.5"/>
                                 </g>
-                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#09090A">PDFs</text>
+                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#1B2A38">PDFs</text>
                             </g>
                             <g transform="translate(40,92)">
                                 <g transform="rotate(4 17 22)">
-                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#0F4B80" stroke-width="1.5"/>
+                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#123A60" stroke-width="1.5"/>
                                     <path d="M24,0 V10 H34 Z" fill="#A9ABAF"/>
                                     <line x1="6" y1="20" x2="28" y2="20" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="27" x2="28" y2="27" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="34" x2="22" y2="34" stroke="#A9ABAF" stroke-width="1.5"/>
                                 </g>
-                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#09090A">Excel</text>
+                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#1B2A38">Excel</text>
                             </g>
                             <g transform="translate(30,154)">
                                 <g transform="rotate(-3 17 22)">
-                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#0F4B80" stroke-width="1.5"/>
+                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#123A60" stroke-width="1.5"/>
                                     <path d="M24,0 V10 H34 Z" fill="#A9ABAF"/>
                                     <line x1="6" y1="20" x2="28" y2="20" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="27" x2="28" y2="27" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="34" x2="22" y2="34" stroke="#A9ABAF" stroke-width="1.5"/>
                                 </g>
-                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#09090A">Emails</text>
+                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#1B2A38">Emails</text>
                             </g>
                             <g transform="translate(42,216)">
                                 <g transform="rotate(5 17 22)">
-                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#0F4B80" stroke-width="1.5"/>
+                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#123A60" stroke-width="1.5"/>
                                     <path d="M24,0 V10 H34 Z" fill="#A9ABAF"/>
                                     <line x1="6" y1="20" x2="28" y2="20" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="27" x2="28" y2="27" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="34" x2="22" y2="34" stroke="#A9ABAF" stroke-width="1.5"/>
                                 </g>
-                                <text x="17" y="58" font-size="8" font-weight="bold" fill="#09090A">Utility Bills</text>
+                                <text x="17" y="58" font-size="8" font-weight="bold" fill="#1B2A38">Utility Bills</text>
                             </g>
                             <g transform="translate(34,278)">
                                 <g transform="rotate(-4 17 22)">
-                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#0F4B80" stroke-width="1.5"/>
+                                    <path d="M0,0 H24 L34,10 V44 H0 Z" fill="#fff" stroke="#123A60" stroke-width="1.5"/>
                                     <path d="M24,0 V10 H34 Z" fill="#A9ABAF"/>
                                     <line x1="6" y1="20" x2="28" y2="20" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="27" x2="28" y2="27" stroke="#A9ABAF" stroke-width="1.5"/>
                                     <line x1="6" y1="34" x2="22" y2="34" stroke="#A9ABAF" stroke-width="1.5"/>
                                 </g>
-                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#09090A">Audits</text>
+                                <text x="17" y="58" font-size="9" font-weight="bold" fill="#1B2A38">Audits</text>
                             </g>
                         </g>
 
                         <!-- unstructured particles flowing into the engine -->
                         <g>
-                            <circle r="3.5" fill="#EAD553"><animate attributeName="fill" values="#EAD553;#0F4B80;#A9ABAF;#EAD553" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#fp1"/></animateMotion></circle>
-                            <circle r="3.5" fill="#0F4B80"><animate attributeName="fill" values="#0F4B80;#A9ABAF;#EAD553;#0F4B80" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="0.6s"><mpath href="#fp2"/></animateMotion></circle>
-                            <circle r="3.5" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#EAD553;#0F4B80;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.2s"><mpath href="#fp3"/></animateMotion></circle>
-                            <circle r="3.5" fill="#EAD553"><animate attributeName="fill" values="#EAD553;#0F4B80;#A9ABAF;#EAD553" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.8s"><mpath href="#fp4"/></animateMotion></circle>
-                            <circle r="3.5" fill="#0F4B80"><animate attributeName="fill" values="#0F4B80;#A9ABAF;#EAD553;#0F4B80" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="2.4s"><mpath href="#fp5"/></animateMotion></circle>
-                            <circle r="3.5" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#EAD553;#0F4B80;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.5s"><mpath href="#fp1"/></animateMotion></circle>
-                            <circle r="3.5" fill="#EAD553"><animate attributeName="fill" values="#EAD553;#0F4B80;#A9ABAF;#EAD553" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="2.1s"><mpath href="#fp3"/></animateMotion></circle>
+                            <circle r="3.5" fill="#BF9F2E"><animate attributeName="fill" values="#BF9F2E;#123A60;#A9ABAF;#BF9F2E" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#fp1"/></animateMotion></circle>
+                            <circle r="3.5" fill="#123A60"><animate attributeName="fill" values="#123A60;#A9ABAF;#BF9F2E;#123A60" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="0.6s"><mpath href="#fp2"/></animateMotion></circle>
+                            <circle r="3.5" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#BF9F2E;#123A60;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.2s"><mpath href="#fp3"/></animateMotion></circle>
+                            <circle r="3.5" fill="#BF9F2E"><animate attributeName="fill" values="#BF9F2E;#123A60;#A9ABAF;#BF9F2E" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.8s"><mpath href="#fp4"/></animateMotion></circle>
+                            <circle r="3.5" fill="#123A60"><animate attributeName="fill" values="#123A60;#A9ABAF;#BF9F2E;#123A60" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="2.4s"><mpath href="#fp5"/></animateMotion></circle>
+                            <circle r="3.5" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#BF9F2E;#123A60;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="1.5s"><mpath href="#fp1"/></animateMotion></circle>
+                            <circle r="3.5" fill="#BF9F2E"><animate attributeName="fill" values="#BF9F2E;#123A60;#A9ABAF;#BF9F2E" dur="4s" repeatCount="indefinite"/><animateMotion dur="3s" repeatCount="indefinite" begin="2.1s"><mpath href="#fp3"/></animateMotion></circle>
                         </g>
 
                         <!-- engine -->
@@ -126,32 +139,32 @@
 
                         <!-- right: above-ground building, floors stacked -->
                         <g>
-                            <rect x="600" y="60" width="150" height="270" fill="#F4F4F8" stroke="#0F4B80" stroke-width="2"/>
+                            <rect x="600" y="60" width="150" height="270" fill="#F4F4F8" stroke="#123A60" stroke-width="2"/>
                             <line x1="600" y1="105" x2="750" y2="105" stroke="#A9ABAF" stroke-width="1"/>
                             <line x1="600" y1="150" x2="750" y2="150" stroke="#A9ABAF" stroke-width="1"/>
                             <line x1="600" y1="195" x2="750" y2="195" stroke="#A9ABAF" stroke-width="1"/>
                             <line x1="600" y1="240" x2="750" y2="240" stroke="#A9ABAF" stroke-width="1"/>
                             <line x1="600" y1="285" x2="750" y2="285" stroke="#A9ABAF" stroke-width="1"/>
-                            <line x1="588" y1="330" x2="762" y2="330" stroke="#0F4B80" stroke-width="2"/>
+                            <line x1="588" y1="330" x2="762" y2="330" stroke="#123A60" stroke-width="2"/>
                         </g>
 
                         <!-- windows materializing on the facade -->
-                        <g transform="translate(727,82)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.3s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.3s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#0F4B80" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#0F4B80" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#0F4B80" stroke-width="0.6"/></g></g>
-                        <g transform="translate(727,127)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.6s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.6s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#0F4B80" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#0F4B80" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#0F4B80" stroke-width="0.6"/></g></g>
-                        <g transform="translate(727,172)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.9s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.9s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#0F4B80" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#0F4B80" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#0F4B80" stroke-width="0.6"/></g></g>
-                        <g transform="translate(727,217)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="1.2s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#0F4B80" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#0F4B80" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#0F4B80" stroke-width="0.6"/></g></g>
-                        <g transform="translate(727,262)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="1.5s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#0F4B80" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#0F4B80" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#0F4B80" stroke-width="0.6"/></g></g>
+                        <g transform="translate(727,82)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.3s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.3s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#123A60" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#123A60" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#123A60" stroke-width="0.6"/></g></g>
+                        <g transform="translate(727,127)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.6s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.6s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#123A60" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#123A60" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#123A60" stroke-width="0.6"/></g></g>
+                        <g transform="translate(727,172)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.9s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="0.9s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#123A60" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#123A60" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#123A60" stroke-width="0.6"/></g></g>
+                        <g transform="translate(727,217)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="1.2s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#123A60" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#123A60" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#123A60" stroke-width="0.6"/></g></g>
+                        <g transform="translate(727,262)"><g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.5s" fill="freeze"/><animateTransform attributeName="transform" type="scale" from="0.2" to="1" dur="0.5s" begin="1.5s" fill="freeze"/><rect x="-5" y="-5" width="10" height="10" fill="#cfe0f0" stroke="#123A60" stroke-width="0.8"/><line x1="0" y1="-5" x2="0" y2="5" stroke="#123A60" stroke-width="0.6"/><line x1="-5" y1="0" x2="5" y2="0" stroke="#123A60" stroke-width="0.6"/></g></g>
 
                         <!-- mechanical distribution: chilled-water risers + supply-air ducts -->
                         <g opacity="0">
                             <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.7s" fill="freeze"/>
                             <!-- chilled-water supply + return risers, tied into the chiller and run up past both air handlers -->
-                            <path d="M610,170 V309 H650" fill="none" stroke="#0F4B80" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M610,170 V309 H650" fill="none" stroke="#123A60" stroke-width="2" stroke-linejoin="round"/>
                             <path d="M615,174 V313 H650" fill="none" stroke="#7fa6c9" stroke-width="2" stroke-linejoin="round"/>
                             <!-- branch tees: supply + return to each air handler -->
-                            <line x1="610" y1="170" x2="622" y2="170" stroke="#0F4B80" stroke-width="2"/>
+                            <line x1="610" y1="170" x2="622" y2="170" stroke="#123A60" stroke-width="2"/>
                             <line x1="615" y1="174" x2="622" y2="174" stroke="#7fa6c9" stroke-width="2"/>
-                            <line x1="610" y1="260" x2="622" y2="260" stroke="#0F4B80" stroke-width="2"/>
+                            <line x1="610" y1="260" x2="622" y2="260" stroke="#123A60" stroke-width="2"/>
                             <line x1="615" y1="264" x2="622" y2="264" stroke="#7fa6c9" stroke-width="2"/>
                             <!-- supply-air ducts off each air handler, with diffuser drops -->
                             <rect x="641" y="169" width="66" height="6" rx="1" fill="#dbe6f0" stroke="#9bb4cc" stroke-width="0.8"/>
@@ -161,10 +174,10 @@
                             <rect x="668" y="265" width="7" height="3" fill="#9bb4cc"/>
                             <rect x="694" y="265" width="7" height="3" fill="#9bb4cc"/>
                             <!-- subtle circulation: chilled water rising, supply air spreading -->
-                            <circle cx="610" cy="305" r="2" fill="#0F4B80"><animate attributeName="cy" values="305;172" dur="2.6s" repeatCount="indefinite"/></circle>
+                            <circle cx="610" cy="305" r="2" fill="#123A60"><animate attributeName="cy" values="305;172" dur="2.6s" repeatCount="indefinite"/></circle>
                             <circle cx="615" cy="174" r="2" fill="#7fa6c9"><animate attributeName="cy" values="174;305" dur="2.6s" repeatCount="indefinite" begin="0.5s"/></circle>
-                            <circle cx="645" cy="172" r="1.6" fill="#EAD553"><animate attributeName="cx" values="645;703" dur="2.2s" repeatCount="indefinite"/></circle>
-                            <circle cx="645" cy="262" r="1.6" fill="#EAD553"><animate attributeName="cx" values="645;703" dur="2.4s" repeatCount="indefinite" begin="0.6s"/></circle>
+                            <circle cx="645" cy="172" r="1.6" fill="#BF9F2E"><animate attributeName="cx" values="645;703" dur="2.2s" repeatCount="indefinite"/></circle>
+                            <circle cx="645" cy="262" r="1.6" fill="#BF9F2E"><animate attributeName="cx" values="645;703" dur="2.4s" repeatCount="indefinite" begin="0.6s"/></circle>
                         </g>
 
                         <!-- structured elements thrown out of the engine, landing on the building -->
@@ -187,8 +200,8 @@
             </div>
 
             <!-- Step 2: Question -->
-            <div class="step-panel" data-step="1">
-                <p class="step-caption">From that minimum viable simulation, the engine starts asking the questions that actually matter.</p>
+            <div class="step-panel" data-step="1" role="tabpanel">
+                <p class="step-caption">The model flags what it's unsure of and asks the questions that would change the answer.</p>
                 <div class="scene-stage">
                     <div class="engine-core">
                         <img src="images/numbuco_anim.gif" alt="The Numerical Engine">
@@ -198,13 +211,13 @@
                             <p class="bubble-text">It looks like you have <strong>single&#8209;pane windows</strong>. Is that right?</p>
                             <svg class="uchart" viewBox="0 0 220 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estimated window U-value distribution, centered near 1.0">
                                 <line x1="14" y1="78" x2="206" y2="78" stroke="#A9ABAF" stroke-width="1"/>
-                                <path d="M22,78 C72,78 82,20 110,20 C138,20 148,78 198,78 Z" fill="#0F4B80" fill-opacity="0.15"/>
-                                <path d="M22,78 C72,78 82,20 110,20 C138,20 148,78 198,78" fill="none" stroke="#0F4B80" stroke-width="2"/>
-                                <line x1="110" y1="22" x2="110" y2="78" stroke="#EAD553" stroke-width="2" stroke-dasharray="3,3"/>
-                                <circle cx="110" cy="20" r="3.5" fill="#EAD553" stroke="#09090A" stroke-width="0.5"/>
-                                <text x="22" y="92" font-family="Arial, sans-serif" font-size="8" fill="#777" text-anchor="middle">0.5</text>
-                                <text x="110" y="93" font-family="Arial, sans-serif" font-size="9" fill="#0F4B80" font-weight="bold" text-anchor="middle">U &#8776; 1.0</text>
-                                <text x="198" y="92" font-family="Arial, sans-serif" font-size="8" fill="#777" text-anchor="middle">1.5</text>
+                                <path d="M22,78 C72,78 82,20 110,20 C138,20 148,78 198,78 Z" fill="#123A60" fill-opacity="0.15"/>
+                                <path d="M22,78 C72,78 82,20 110,20 C138,20 148,78 198,78" fill="none" stroke="#123A60" stroke-width="2"/>
+                                <line x1="110" y1="22" x2="110" y2="78" stroke="#BF9F2E" stroke-width="2" stroke-dasharray="3,3"/>
+                                <circle cx="110" cy="20" r="3.5" fill="#BF9F2E" stroke="#1B2A38" stroke-width="0.5"/>
+                                <text x="22" y="92" font-family="'Nunito Sans', Arial, sans-serif" font-size="8" fill="#777" text-anchor="middle">0.5</text>
+                                <text x="110" y="93" font-family="'Nunito Sans', Arial, sans-serif" font-size="9" fill="#123A60" font-weight="bold" text-anchor="middle">U &#8776; 1.0</text>
+                                <text x="198" y="92" font-family="'Nunito Sans', Arial, sans-serif" font-size="8" fill="#777" text-anchor="middle">1.5</text>
                             </svg>
                             <p class="uchart-cap">Estimated window U&#8209;value &mdash; right where single glazing lives.</p>
                             <div class="bubble-actions"><span class="chip">Yes</span><span class="chip ghost">Not sure</span></div>
@@ -213,27 +226,27 @@
                             <p class="bubble-text">We're also seeing signs of <strong>low &Delta;T syndrome</strong>. How clean are your coils?</p>
                             <svg class="uchart" viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modeled chilled water supply distribution centered at 42 degrees and return centered at 50 degrees">
                                 <line x1="14" y1="80" x2="206" y2="80" stroke="#A9ABAF" stroke-width="1"/>
-                                <path d="M40,80 C58,80 62,28 71,28 C80,28 84,80 102,80 Z" fill="#0F4B80" fill-opacity="0.16"/>
-                                <path d="M40,80 C58,80 62,28 71,28 C80,28 84,80 102,80" fill="none" stroke="#0F4B80" stroke-width="2"/>
-                                <line x1="71" y1="30" x2="71" y2="80" stroke="#0F4B80" stroke-width="1" stroke-dasharray="2,2"/>
+                                <path d="M40,80 C58,80 62,28 71,28 C80,28 84,80 102,80 Z" fill="#123A60" fill-opacity="0.16"/>
+                                <path d="M40,80 C58,80 62,28 71,28 C80,28 84,80 102,80" fill="none" stroke="#123A60" stroke-width="2"/>
+                                <line x1="71" y1="30" x2="71" y2="80" stroke="#123A60" stroke-width="1" stroke-dasharray="2,2"/>
                                 <path d="M97,80 C115,80 119,28 128,28 C137,28 141,80 159,80 Z" fill="#C0392B" fill-opacity="0.16"/>
                                 <path d="M97,80 C115,80 119,28 128,28 C137,28 141,80 159,80" fill="none" stroke="#C0392B" stroke-width="2"/>
                                 <line x1="128" y1="30" x2="128" y2="80" stroke="#C0392B" stroke-width="1" stroke-dasharray="2,2"/>
-                                <text x="99" y="18" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#09090A" text-anchor="middle">&Delta;T &#8776; 8&deg;</text>
-                                <text x="71" y="94" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0F4B80" text-anchor="middle">42&deg; supply</text>
-                                <text x="128" y="94" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#C0392B" text-anchor="middle">50&deg; return</text>
+                                <text x="99" y="18" font-family="'Nunito Sans', Arial, sans-serif" font-size="9" font-weight="bold" fill="#1B2A38" text-anchor="middle">&Delta;T &#8776; 8&deg;</text>
+                                <text x="71" y="94" font-family="'Nunito Sans', Arial, sans-serif" font-size="8" font-weight="bold" fill="#123A60" text-anchor="middle">42&deg; supply</text>
+                                <text x="128" y="94" font-family="'Nunito Sans', Arial, sans-serif" font-size="8" font-weight="bold" fill="#C0392B" text-anchor="middle">50&deg; return</text>
                             </svg>
                             <p class="uchart-cap">Modeled chilled&#8209;water supply vs. return &mdash; only ~8&deg;F apart.</p>
                             <p class="bubble-note">We need more data to be sure.</p>
-                            <span class="bubble-cta">Connect your BMS data &rarr;</span>
+                            <span class="bubble-cta">Add it to the next site visit &rarr;</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Step 3: Refine -->
-            <div class="step-panel" data-step="2">
-                <p class="step-caption">When a question is worth answering, you wire in live data &mdash; at your own pace. The simulation tunes itself to reality as it arrives.</p>
+            <div class="step-panel" data-step="2" role="tabpanel">
+                <p class="step-caption">Then we measure. Quarterly site visits and the data loggers we install replace assumptions with readings, and the model tunes itself to the building.</p>
                 <svg class="live-svg" viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <path id="W1" d="M112,42  C 260,42  380,125 510,125" fill="none"/>
@@ -242,65 +255,65 @@
                         <path id="W4" d="M112,216 C 260,216 380,125 510,125" fill="none"/>
                     </defs>
 
-                    <circle cx="648" cy="34" r="5" fill="#EAD553"><animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" repeatCount="indefinite"/></circle>
-                    <text x="660" y="38" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#09090A">REAL-TIME</text>
+                    <circle cx="648" cy="34" r="5" fill="#BF9F2E"><animate attributeName="opacity" values="0.25;1;0.25" dur="1.4s" repeatCount="indefinite"/></circle>
+                    <text x="660" y="38" font-family="'Nunito Sans', Arial, sans-serif" font-size="12" font-weight="bold" fill="#1B2A38">REAL-TIME</text>
 
                     <use href="#W1" stroke="#A9ABAF" stroke-width="2" fill="none"/>
                     <use href="#W2" stroke="#A9ABAF" stroke-width="2" fill="none"/>
                     <use href="#W3" stroke="#A9ABAF" stroke-width="2" fill="none"/>
                     <use href="#W4" stroke="#A9ABAF" stroke-width="2" fill="none"/>
 
-                    <g font-family="Arial, sans-serif" text-anchor="middle">
-                        <rect x="82" y="16" width="26" height="52" rx="2" fill="#0F4B80"/>
-                        <circle cx="89" cy="23" r="1.6" fill="#EAD553"/>
+                    <g font-family="'Nunito Sans', Arial, sans-serif" text-anchor="middle">
+                        <rect x="82" y="16" width="26" height="52" rx="2" fill="#123A60"/>
+                        <circle cx="89" cy="23" r="1.6" fill="#BF9F2E"/>
                         <circle cx="95" cy="23" r="1.6" fill="#A9ABAF"/>
                         <line x1="86" y1="34" x2="104" y2="34" stroke="#F4F4F8" stroke-width="1" opacity="0.5"/>
                         <line x1="86" y1="42" x2="104" y2="42" stroke="#F4F4F8" stroke-width="1" opacity="0.5"/>
                         <line x1="86" y1="50" x2="104" y2="50" stroke="#F4F4F8" stroke-width="1" opacity="0.5"/>
                         <line x1="86" y1="58" x2="104" y2="58" stroke="#F4F4F8" stroke-width="1" opacity="0.5"/>
-                        <text x="95" y="82" font-size="12" font-weight="bold" fill="#09090A">BMS</text>
+                        <text x="95" y="82" font-size="12" font-weight="bold" fill="#1B2A38">BMS</text>
 
-                        <rect x="77" y="82" width="36" height="36" fill="#0F4B80"/>
+                        <rect x="77" y="82" width="36" height="36" fill="#123A60"/>
                         <rect x="82" y="88" width="26" height="13" fill="#F4F4F8" opacity="0.9"/>
-                        <text x="95" y="98" font-size="8" font-weight="bold" fill="#0F4B80">0.42</text>
+                        <text x="95" y="98" font-size="8" font-weight="bold" fill="#123A60">0.42</text>
                         <line x1="82" y1="107" x2="108" y2="107" stroke="#F4F4F8" stroke-width="1" opacity="0.6"/>
                         <line x1="82" y1="112" x2="108" y2="112" stroke="#F4F4F8" stroke-width="1" opacity="0.6"/>
-                        <text x="95" y="132" font-size="12" font-weight="bold" fill="#09090A">Meters</text>
+                        <text x="95" y="132" font-size="12" font-weight="bold" fill="#1B2A38">Meters</text>
 
-                        <circle cx="95" cy="158" r="20" fill="#0F4B80"/>
+                        <circle cx="95" cy="158" r="20" fill="#123A60"/>
                         <circle cx="95" cy="158" r="9" fill="#F4F4F8" opacity="0.85"/>
-                        <circle cx="95" cy="158" r="3.5" fill="#EAD553"/>
-                        <text x="95" y="190" font-size="12" font-weight="bold" fill="#09090A">Sensors</text>
+                        <circle cx="95" cy="158" r="3.5" fill="#BF9F2E"/>
+                        <text x="95" y="190" font-size="12" font-weight="bold" fill="#1B2A38">Loggers</text>
 
-                        <ellipse cx="95" cy="204" rx="16" ry="5" fill="#0F4B80"/>
-                        <rect x="79" y="204" width="32" height="18" fill="#0F4B80"/>
-                        <ellipse cx="95" cy="222" rx="16" ry="5" fill="#0b3a63"/>
+                        <ellipse cx="95" cy="204" rx="16" ry="5" fill="#123A60"/>
+                        <rect x="79" y="204" width="32" height="18" fill="#123A60"/>
+                        <ellipse cx="95" cy="222" rx="16" ry="5" fill="#0B2942"/>
                         <ellipse cx="95" cy="210" rx="16" ry="5" fill="none" stroke="#F4F4F8" stroke-width="1" opacity="0.35"/>
                         <ellipse cx="95" cy="204" rx="16" ry="5" fill="none" stroke="#F4F4F8" stroke-width="1" opacity="0.45"/>
-                        <text x="95" y="242" font-size="12" font-weight="bold" fill="#09090A">Measurements</text>
+                        <text x="95" y="242" font-size="12" font-weight="bold" fill="#1B2A38">Site visits</text>
                     </g>
 
                     <image href="images/numbuco_anim.gif" x="505" y="55" width="140" height="140"/>
 
                     <g>
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#0F4B80"><animate attributeName="fill" values="#0F4B80;#EAD553;#A9ABAF;#09090A;#0F4B80" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#W1"/></animateMotion></rect>
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#EAD553"><animate attributeName="fill" values="#EAD553;#A9ABAF;#09090A;#0F4B80;#EAD553" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto" begin="1.3s"><mpath href="#W1"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#123A60"><animate attributeName="fill" values="#123A60;#BF9F2E;#A9ABAF;#1B2A38;#123A60" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#W1"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#BF9F2E"><animate attributeName="fill" values="#BF9F2E;#A9ABAF;#1B2A38;#123A60;#BF9F2E" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto" begin="1.3s"><mpath href="#W1"/></animateMotion></rect>
 
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#09090A;#0F4B80;#EAD553;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.9s" repeatCount="indefinite" rotate="auto" begin="0.5s"><mpath href="#W2"/></animateMotion></rect>
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#0F4B80"><animate attributeName="fill" values="#0F4B80;#EAD553;#A9ABAF;#09090A;#0F4B80" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.9s" repeatCount="indefinite" rotate="auto" begin="1.9s"><mpath href="#W2"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#1B2A38;#123A60;#BF9F2E;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.9s" repeatCount="indefinite" rotate="auto" begin="0.5s"><mpath href="#W2"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#123A60"><animate attributeName="fill" values="#123A60;#BF9F2E;#A9ABAF;#1B2A38;#123A60" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.9s" repeatCount="indefinite" rotate="auto" begin="1.9s"><mpath href="#W2"/></animateMotion></rect>
 
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#EAD553"><animate attributeName="fill" values="#EAD553;#A9ABAF;#09090A;#0F4B80;#EAD553" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.7s" repeatCount="indefinite" rotate="auto" begin="1s"><mpath href="#W3"/></animateMotion></rect>
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#09090A"><animate attributeName="fill" values="#09090A;#0F4B80;#EAD553;#A9ABAF;#09090A" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.7s" repeatCount="indefinite" rotate="auto" begin="2.4s"><mpath href="#W3"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#BF9F2E"><animate attributeName="fill" values="#BF9F2E;#A9ABAF;#1B2A38;#123A60;#BF9F2E" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.7s" repeatCount="indefinite" rotate="auto" begin="1s"><mpath href="#W3"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#1B2A38"><animate attributeName="fill" values="#1B2A38;#123A60;#BF9F2E;#A9ABAF;#1B2A38" dur="4s" repeatCount="indefinite"/><animateMotion dur="2.7s" repeatCount="indefinite" rotate="auto" begin="2.4s"><mpath href="#W3"/></animateMotion></rect>
 
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#0F4B80"><animate attributeName="fill" values="#0F4B80;#EAD553;#A9ABAF;#09090A;#0F4B80" dur="4s" repeatCount="indefinite"/><animateMotion dur="3.1s" repeatCount="indefinite" rotate="auto" begin="0.2s"><mpath href="#W4"/></animateMotion></rect>
-                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#09090A;#0F4B80;#EAD553;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3.1s" repeatCount="indefinite" rotate="auto" begin="1.7s"><mpath href="#W4"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#123A60"><animate attributeName="fill" values="#123A60;#BF9F2E;#A9ABAF;#1B2A38;#123A60" dur="4s" repeatCount="indefinite"/><animateMotion dur="3.1s" repeatCount="indefinite" rotate="auto" begin="0.2s"><mpath href="#W4"/></animateMotion></rect>
+                        <rect x="-5" y="-3" width="10" height="6" rx="1" fill="#A9ABAF"><animate attributeName="fill" values="#A9ABAF;#1B2A38;#123A60;#BF9F2E;#A9ABAF" dur="4s" repeatCount="indefinite"/><animateMotion dur="3.1s" repeatCount="indefinite" rotate="auto" begin="1.7s"><mpath href="#W4"/></animateMotion></rect>
                     </g>
                 </svg>
             </div>
 
             <!-- Step 4: Decide -->
-            <div class="step-panel" data-step="3">
-                <p class="step-caption">&hellip; and the engine turns those questions into decisions &mdash; cost, incentive, payback, and what to do next.</p>
+            <div class="step-panel" data-step="3" role="tabpanel">
+                <p class="step-caption">The model turns what it knows into decisions: what to do, what it costs, what it saves, which incentives apply, and when it pays back.</p>
                 <div class="scene-stage">
                     <div class="engine-core">
                         <img src="images/numbuco_anim.gif" alt="The Numerical Engine">
@@ -311,8 +324,10 @@
                             <div class="stat-row">
                                 <span class="stat"><span class="v">$2.5M</span><span class="k">Project cost</span></span>
                                 <span class="stat"><span class="v">$800k</span><span class="k">Incentive</span></span>
+                                <span class="stat"><span class="v">$190k</span><span class="k">Saved / yr</span></span>
                                 <span class="stat"><span class="v">9 yrs</span><span class="k">Payback</span></span>
                             </div>
+                            <p class="uchart-cap">Illustrative figures.</p>
                             <span class="bubble-cta">Learn more &rarr;</span>
                         </div>
                         <div class="bubble answer reveal" style="--d:.6s">
@@ -325,48 +340,69 @@
         </div>
 
         <div class="step-controls">
-            <button class="step-prev" type="button" aria-label="Previous step">&larr; Back</button>
-            <button class="step-next" type="button" aria-label="Next step">Next &rarr;</button>
+            <button class="step-prev" type="button" aria-label="Previous step">&larr;</button>
+            <button class="step-play" type="button" aria-label="Pause slideshow">Pause</button>
+            <button class="step-next" type="button" aria-label="Next step">&rarr;</button>
         </div>
     </section>
 
     <hr>
 
-    <div class="tiers">
-        <h2 class="tiers-title">Three ways in</h2>
-        <p class="tiers-sub">Let the engine grow with you &mdash; don't buy what you don't need.</p>
+    <section class="tiers" id="pricing">
+        <h2 class="tiers-title">Two ways in</h2>
+        <p class="tiers-sub">Both give you a calibrated model of your building. Rational builds it from the data you already have; Real adds quarterly measurement and real-time data.</p>
 
         <div class="tier-grid">
             <div class="tier">
                 <span class="tier-glyph">&#x211A;</span>
                 <h3>Numerical Rational</h3>
-                <p class="tier-blurb">Start without pulling a single wire. We work with the utility data and documents you already have on hand to stand up our flagship decision engine and energy management system, powered by a minimum viable simulation of your site.</p>
-                <p class="tier-price">$2,000 <span>/ site / year</span></p>
+                <p class="tier-price">$3,000 <span>/ site / year</span></p>
+                <p class="tier-lead">Your building's numbers from what you already have. No hardware, no site visit.</p>
+                <p class="tier-blurb">We work with the utility data and documents you already have to stand up our decision engine and energy-management system, built on a calibrated model of your site.</p>
+                <ul class="tier-list">
+                    <li>A calibrated model of your site, built from existing data</li>
+                    <li>Utility-bill tracking, cost trending, charting, and reporting</li>
+                    <li>Your regulatory-risk position</li>
+                    <li>Ranked upgrade options with cost, savings, and payback</li>
+                </ul>
+                <p class="tier-foot">Self-serve. Share, export, or schedule any report.</p>
             </div>
 
             <div class="tier tier-featured">
                 <span class="tier-glyph">&#x211D;</span>
                 <h3>Numerical Real</h3>
-                <p class="tier-blurb">Pair real-time data and strategically integrate and deploy sensors to get a better-tuned simulation, a view into the live physics of your site, and meatier operational insights and capital plans.</p>
-                <p class="tier-price">$8,000 <span>/ site / year</span></p>
-            </div>
-
-            <div class="tier">
-                <span class="tier-glyph">&#x2102;</span>
-                <h3>Numerical Complex</h3>
-                <p class="tier-blurb">We live for the hard problems at the intersection of data, energy, and building physics. If you have a problem with an interesting shape that doesn't quite fit and requires some imagination, reach out.</p>
-                <p class="tier-price tier-price-contact"><a href="mailto:chris@numericalbuilding.com">Contact Us</a></p>
+                <p class="tier-price">$12,000 <span>/ site / year</span></p>
+                <p class="tier-lead">Everything in Rational, plus the building measured on a regular cadence.</p>
+                <p class="tier-blurb">A quarterly on-site engagement and real-time logger data tune the model to the building itself.</p>
+                <ul class="tier-list">
+                    <li>Four site visits a year, 40 on-site hours, with a one-page readout after each</li>
+                    <li>Real-time data from loggers we install</li>
+                    <li>A Site Characterization to start: the measured, physical foundation for the model (typically $9,500, waived with a 24-month commitment)</li>
+                    <li>25% off incentive-application and administration work</li>
+                </ul>
+                <p class="tier-foot">Year one prepaid with a 24-month commitment.</p>
             </div>
         </div>
-    </div>
+
+        <div class="tier tier-complex">
+            <span class="tier-glyph">&#x2102;</span>
+            <div class="tier-complex-body">
+                <h3>Numerical Complex</h3>
+                <p class="tier-blurb">Unusual buildings, portfolios, or projects that don't fit the standard engagement. Scoped to the job.</p>
+            </div>
+            <p class="tier-price-contact"><a href="mailto:sales@numericalbuilding.com?subject=Numerical%20Complex">Contact sales</a></p>
+        </div>
+
+        <p class="tiers-fine">Model outputs are estimates for planning. We don't file benchmarking or compliance submissions on your behalf, and we don't guarantee savings, incentive awards, or compliance outcomes.</p>
+    </section>
 
     <hr>
 
     <!-- ===== Closing principles ===== -->
     <section class="principles" data-animate>
-        <p class="reveal" style="--d:.05s">Our principles are simple: <strong>work with what you have, and add data strategically.</strong></p>
-        <p class="reveal" style="--d:.2s">Buildings are real, not virtual. Your problems are real, not virtual. Software should do its best to reflect the truth on the ground.</p>
-        <p class="reveal" style="--d:.35s">A product shouldn't take your time or your attention. You shouldn't even have to log in. Every interaction should be guided by a core question:</p>
+        <p class="reveal" style="--d:.05s">Our principles are simple: <strong>work with what you have, and measure what matters.</strong></p>
+        <p class="reveal" style="--d:.2s">Software should reflect the building as it actually is.</p>
+        <p class="reveal" style="--d:.35s">It also shouldn't take your time or attention. Reports can be shared, exported, and scheduled, and you can ask the model questions in plain language. Every interaction is guided by a core question:</p>
         <ul class="question-ladder reveal" style="--d:.5s">
             <li>What do you want to know?</li>
             <li>What does the engine need to know?</li>
@@ -376,45 +412,6 @@
             <li>What is it going to save?</li>
             <li>How are you going to pay for it?</li>
         </ul>
-    </section>
-
-    <!-- ===== Silly needs-assessment flowchart ===== -->
-    <section class="scene flowchart-scene" data-animate>
-        <svg class="flow-svg reveal" viewBox="0 0 820 280" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <marker id="arrow" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto">
-                    <path d="M0,0 L6.5,3 L0,6 Z" fill="#0f4c81"/>
-                </marker>
-            </defs>
-
-            <!-- connectors -->
-            <path class="flow-line" d="M170,138 L242,138" fill="none" stroke="#0f4c81" stroke-width="2" marker-end="url(#arrow)"/>
-            <path class="flow-line" d="M470,138 C 540,138 540,96 596,96" fill="none" stroke="#0f4c81" stroke-width="2" marker-end="url(#arrow)"/>
-            <path class="flow-line" d="M470,138 C 540,138 540,184 596,184" fill="none" stroke="#0f4c81" stroke-width="2" marker-end="url(#arrow)"/>
-
-            <!-- branch labels -->
-            <text x="540" y="92" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#0f4c81" text-anchor="middle">Yes</text>
-            <text x="540" y="200" font-family="'Raleway', sans-serif" font-size="13" font-weight="700" fill="#0f4c81" text-anchor="middle">No</text>
-
-            <!-- start node -->
-            <rect x="20" y="110" width="150" height="56" rx="12" fill="#fff" stroke="#0f4c81" stroke-width="2"/>
-            <text x="95" y="143" font-family="'Raleway', sans-serif" font-size="15" font-weight="700" fill="#09090A" text-anchor="middle">Is it right for us?</text>
-
-            <!-- decision diamond -->
-            <polygon points="360,78 470,138 360,198 250,138" fill="#F4F4F8" stroke="#A9ABAF" stroke-width="2"/>
-            <text font-family="'Raleway', sans-serif" font-size="12" fill="#09090A" text-anchor="middle">
-                <tspan x="360" y="126">Is your annual energy</tspan>
-                <tspan x="360" y="142">spend &#8805; $200,000</tspan>
-                <tspan x="360" y="158">a year?</tspan>
-            </text>
-
-            <!-- outcomes -->
-            <rect x="596" y="74" width="180" height="44" rx="10" fill="#0f4c81"/>
-            <text x="686" y="101" font-family="'Raleway', sans-serif" font-size="16" font-weight="700" fill="#F4F4F8" text-anchor="middle">Definitely</text>
-
-            <rect x="596" y="162" width="180" height="44" rx="10" fill="#EAD553"/>
-            <text x="686" y="189" font-family="'Raleway', sans-serif" font-size="16" font-weight="700" fill="#09090A" text-anchor="middle">Possibly</text>
-        </svg>
     </section>
 
     <hr>
@@ -435,8 +432,14 @@
         </div>
     </div>
 
+    <div class="closing-cta">
+        <a class="btn" href="mailto:sales@numericalbuilding.com?subject=Numerical%20Building%20inquiry">Talk to sales</a>
+    </div>
+
     <footer>
-        <p>&copy; 2026 The Numerical Building Corporation. All rights reserved.</p>
+        <p class="foot-who">The Numerical Building Corporation &middot; <a href="tel:+18457640243">845-764-0243</a> &middot; <a href="mailto:sales@numericalbuilding.com">sales@numericalbuilding.com</a></p>
+        <p class="foot-tag">your building, by the numbers.</p>
+        <p class="foot-copy">&copy; 2026 The Numerical Building Corporation</p>
     </footer>
 
     <script>
@@ -466,31 +469,62 @@
             var panels = [].slice.call(wt.querySelectorAll('.step-panel'));
             var prev = wt.querySelector('.step-prev');
             var next = wt.querySelector('.step-next');
+            var play = wt.querySelector('.step-play');
             var ingest = wt.querySelector('.ingest-svg');
+            var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var cur = 0;
+
             function replayIngest() {
                 if (ingest && ingest.setCurrentTime) {
                     try { ingest.setCurrentTime(0); } catch (e) {}
                 }
             }
             function show(i) {
-                cur = Math.max(0, Math.min(panels.length - 1, i));
-                tabs.forEach(function (t, k) { t.classList.toggle('active', k === cur); });
-                panels.forEach(function (p, k) { p.classList.toggle('active', k === cur); });
-                if (prev) prev.disabled = (cur === 0);
-                if (next) next.disabled = (cur === panels.length - 1);
+                cur = (i + panels.length) % panels.length;
+                tabs.forEach(function (t, k) {
+                    t.classList.toggle('active', k === cur);
+                    t.setAttribute('aria-selected', k === cur ? 'true' : 'false');
+                });
+                panels.forEach(function (p, k) {
+                    p.classList.toggle('active', k === cur);
+                    p.setAttribute('aria-hidden', k === cur ? 'false' : 'true');
+                });
                 if (cur === 0) replayIngest();
             }
-            tabs.forEach(function (t, k) { t.addEventListener('click', function () { show(k); }); });
-            if (prev) prev.addEventListener('click', function () { show(cur - 1); });
-            if (next) next.addEventListener('click', function () { show(cur + 1); });
-            // Replay the ingest build-up each time it scrolls into view.
+            // Autoplay is driven by the progress bar's CSS animation: when the
+            // active tab's bar fills, advance. Pausing the animation pauses the slideshow.
+            function setAutoplay(on) {
+                wt.classList.toggle('autoplay', on);
+                if (play) {
+                    play.textContent = on ? 'Pause' : 'Play';
+                    play.setAttribute('aria-label', on ? 'Pause slideshow' : 'Play slideshow');
+                }
+            }
+            tabs.forEach(function (t, k) {
+                t.addEventListener('click', function () { setAutoplay(false); show(k); });
+                var bar = t.querySelector('.step-progress');
+                if (bar) bar.addEventListener('animationend', function (e) {
+                    if (e.target === bar && wt.classList.contains('autoplay')) show(cur + 1);
+                });
+            });
+            if (prev) prev.addEventListener('click', function () { setAutoplay(false); show(cur - 1); });
+            if (next) next.addEventListener('click', function () { setAutoplay(false); show(cur + 1); });
+            if (play) play.addEventListener('click', function () {
+                var on = !wt.classList.contains('autoplay');
+                setAutoplay(on);
+                if (on) show(cur + 1);
+            });
+            // Hold the slideshow while it's off screen; replay the ingest build-up on return.
             if ('IntersectionObserver' in window) {
                 var io2 = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (e) { if (e.isIntersecting && cur === 0) replayIngest(); });
+                    entries.forEach(function (e) {
+                        wt.classList.toggle('offscreen', !e.isIntersecting);
+                        if (e.isIntersecting && cur === 0) replayIngest();
+                    });
                 }, { threshold: 0.3 });
                 io2.observe(wt);
             }
+            setAutoplay(!reduced);
             show(0);
         })();
     </script>

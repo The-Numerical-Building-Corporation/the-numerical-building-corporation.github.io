@@ -1,137 +1,159 @@
+/* ===== Tokens (match the sales collateral) ===== */
+:root {
+    --blue: #123A60;        /* Prussian - primary */
+    --blue-dark: #0B2942;   /* navy - hovers, deep accents */
+    --char: #1B2A38;        /* charcoal - header/footer band, headings */
+    --gold: #BF9F2E;
+    --gold-dark: #8F761D;   /* gold for text on light backgrounds */
+    --bg: #F1F2F5;
+    --surface: #fff;
+    --text: #2b2f36;
+    --muted: #6B7280;
+    --line: #E3E5EB;
+    --line-strong: #c9ccd2;
+    --tint: #eef1f5;
+    --on-dark: #f4f4f8;
+    --on-dark-muted: #9fb2c4;
+
+    --font-head: 'Quicksand', 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-body: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-math: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math', Georgia, 'Times New Roman', serif;
+}
+
 /* ===== Base / Reset ===== */
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f8;
-    color: #333;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+}
+
+a {
+    color: var(--blue);
 }
 
 /* ===== Header ===== */
 header {
-    background-color: #2b2b2b;
-    color: #f4f4f8;
-    padding: 20px 10px 10px;
+    background-color: var(--char);
+    color: var(--on-dark);
+    padding: 20px 16px 14px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
     margin: 0;
 }
 
 header > p {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin: 5px 0 0;
     font-style: italic;
+    color: var(--on-dark-muted);
 }
 
-/* ===== Navigation ===== */
-nav {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #f4f4f8;
-    text-decoration: none;
-    padding: 8px 18px;
-    font-size: 0.95rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-nav a:hover,
-nav a.active {
-    background-color: #0f4c81;
-}
-
-/* ===== Main content areas ===== */
+/* ===== Hero ===== */
 .hero {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 760px;
+    margin: 24px auto 10px;
+    padding: 0 20px;
     text-align: center;
+}
+
+.hero img {
+    margin: 10px 0 0;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.25;
+    margin: 6px 0 14px;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.content {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.content p {
     font-size: 1.15rem;
-    line-height: 1.7;
+    line-height: 1.65;
+    margin: 0;
 }
 
-.content h2 {
-    font-size: 1.8rem;
-    color: #09090A;
-    margin-top: 50px;
-    margin-bottom: 10px;
+/* ===== CTA ===== */
+.cta {
+    margin: 26px 0 10px;
 }
 
-.content h3 {
-    font-size: 1.3rem;
-    color: #0f4c81;
-    margin-top: 35px;
-    margin-bottom: 8px;
+.cta a,
+.btn {
+    display: inline-block;
+    background-color: var(--blue);
+    color: var(--on-dark);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 28px;
+    font-size: 1.05rem;
+    border-radius: 5px;
+    transition: background-color 0.2s;
 }
 
-.content ul {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    padding-left: 25px;
+.cta a:hover,
+.btn:hover {
+    background-color: var(--blue-dark);
 }
 
-/* ===== Engine intro + diagram (kept tight together) ===== */
-.engine-intro {
-    margin-bottom: 0;
-    padding-bottom: 0;
+.hero .cta-alt {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--muted);
 }
 
-.engine-diagram {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px 10px;
+.cta .cta-alt a {
+    display: inline;
+    background: none;
+    color: var(--blue);
+    padding: 0;
+    font-size: inherit;
+    font-weight: 600;
 }
 
-.engine-diagram svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* ===== Page hero (for sub-pages) ===== */
-.page-hero {
-    max-width: 800px;
-    margin: 40px auto 20px;
-    padding: 20px;
+.closing-cta {
     text-align: center;
+    margin: 10px auto 40px;
 }
 
-.page-hero h2 {
-    font-size: 2rem;
-    color: #09090A;
+/* ===== Measurement throughline ===== */
+.measure {
+    max-width: 720px;
+    margin: 30px auto 26px;
+    padding: 22px 26px;
+    background: var(--surface);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+}
+
+.measure h2 {
+    font-size: 1.45rem;
+    color: var(--blue);
+    margin: 0 0 8px;
+}
+
+.measure p {
+    font-size: 1.08rem;
+    line-height: 1.65;
     margin: 0 0 10px;
 }
 
-.page-hero p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
+.measure p:last-child {
+    margin-bottom: 0;
 }
 
-/* ===== Section cards (for linking to sub-sections) ===== */
+/* ===== Section cards ===== */
 .section-cards {
     position: relative;
     display: flex;
@@ -150,21 +172,21 @@ nav a.active {
     align-items: center;
     justify-content: center;
     min-height: 54px;
-    background: #fff;
-    border: 1px solid #dbdde0;
+    background: var(--surface);
+    border: 1px solid var(--line);
     border-radius: 8px;
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
-    color: #333;
+    color: var(--text);
     cursor: pointer;
     transition: border-color 0.2s, box-shadow 0.2s,
                 transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
 }
 
 .section-card:hover {
-    border-color: #0f4c81;
-    box-shadow: 0 2px 12px rgba(15, 76, 129, 0.12);
+    border-color: var(--blue);
+    box-shadow: 0 2px 12px rgba(18, 58, 96, 0.12);
 }
 
 /* ===== "For Everyone" merge interaction ===== */
@@ -181,9 +203,9 @@ nav a.active {
     margin-top: 4px;
     text-align: center;
     text-decoration: none;
-    background: #0f4c81;
+    background: var(--blue);
     border-radius: 8px;
-    box-shadow: 0 6px 22px rgba(15, 76, 129, 0.18);
+    box-shadow: 0 6px 22px rgba(18, 58, 96, 0.18);
 }
 
 /* Hover-capable devices: hide it as an overlay and run the merge.
@@ -207,7 +229,7 @@ nav a.active {
     .section-cards:hover .section-card {
         opacity: 0;
         transform: scale(0.85);
-        border-color: #dbdde0;
+        border-color: var(--line);
         box-shadow: none;
         pointer-events: none;
     }
@@ -220,7 +242,7 @@ nav a.active {
 }
 
 .section-merge h3 {
-    color: #EAD553;
+    color: var(--gold);
     font-size: 1.6rem;
     margin: 0 0 4px;
 }
@@ -230,57 +252,28 @@ nav a.active {
     font-size: 0.78rem;
     font-weight: 400;
     letter-spacing: 0.04em;
-    color: #f4f4f8;
+    color: var(--on-dark);
     opacity: 0.75;
 }
 
 .section-card h3 {
     font-size: 1.02rem;
-    color: #0f4c81;
+    color: var(--blue);
     margin: 0;
     line-height: 1.25;
-}
-
-/* ===== CTA ===== */
-.cta {
-    margin: 30px 0;
-}
-
-.cta a {
-    display: inline-block;
-    background-color: #0f4c81;
-    color: #f4f4f8;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.cta a:hover {
-    background-color: #0a3559;
 }
 
 /* ===== Dividers ===== */
 hr {
     border: none;
-    border-top: 1px solid #dbdde0;
+    border-top: 1px solid var(--line);
     margin: 40px auto;
     max-width: 800px;
 }
 
-/* ===== Sub-section divider ===== */
-.section-divider {
-    width: 60px;
-    height: 3px;
-    background-color: #EAD553;
-    border: none;
-    margin: 50px auto 40px;
-    border-radius: 2px;
-}
-
 /* ===== Pricing tiers ===== */
 .tiers {
-    max-width: 1000px;
+    max-width: 860px;
     margin: 40px auto;
     padding: 0 20px;
     text-align: center;
@@ -288,16 +281,16 @@ hr {
 
 .tiers-title {
     font-size: 2rem;
-    color: #09090A;
+    color: var(--char);
     margin: 0 0 8px;
 }
 
 .tiers-sub {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1.08rem;
+    color: var(--muted);
     line-height: 1.6;
     max-width: 620px;
-    margin: 0 auto 35px;
+    margin: 0 auto 32px;
 }
 
 .tier-grid {
@@ -309,108 +302,178 @@ hr {
 }
 
 .tier {
-    flex: 1 1 260px;
-    max-width: 320px;
+    flex: 1 1 300px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border: 1px solid #dbdde0;
+    background: var(--surface);
+    border: 1px solid var(--line);
     border-radius: 10px;
-    padding: 32px 26px 28px;
+    padding: 30px 26px 26px;
     text-align: left;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .tier:hover {
-    border-color: #0f4c81;
-    box-shadow: 0 4px 18px rgba(15, 76, 129, 0.14);
+    border-color: var(--blue);
+    box-shadow: 0 4px 18px rgba(18, 58, 96, 0.14);
     transform: translateY(-3px);
 }
 
 /* Blackboard-bold glyph (Q, R, C) in the Numerical Building style */
 .tier-glyph {
-    font-family: 'Cambria Math', 'Latin Modern Math', Georgia, 'Times New Roman', serif;
+    font-family: var(--font-math);
     font-size: 3.4rem;
     line-height: 1;
-    color: #0f4c81;
+    color: var(--blue);
     display: block;
-    margin-bottom: 14px;
-    /* subtle yellow underglow to echo the brand accent */
-    text-shadow: 2px 2px 0 rgba(234, 213, 83, 0.55);
+    margin-bottom: 12px;
+    /* gold underglow to echo the brand accent */
+    text-shadow: 2px 2px 0 rgba(191, 159, 46, 0.55);
 }
 
 .tier h3 {
     font-size: 1.35rem;
-    color: #09090A;
-    margin: 0 0 12px;
+    color: var(--char);
+    margin: 0 0 4px;
     font-weight: 700;
-}
-
-.tier-blurb {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #444;
-    margin: 0 0 22px;
-    flex-grow: 1;
 }
 
 .tier-price {
+    font-family: var(--font-head);
     font-size: 1.6rem;
     font-weight: 700;
-    color: #0f4c81;
-    margin: 0;
+    color: var(--blue);
+    margin: 0 0 12px;
 }
 
 .tier-price span {
+    font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 400;
-    color: #777;
+    color: var(--muted);
     white-space: nowrap;
+}
+
+.tier-lead {
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--char);
+    margin: 0 0 8px;
+}
+
+.tier-blurb {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0 0 10px;
+}
+
+.tier-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    flex-grow: 1;
+}
+
+.tier-list li {
+    position: relative;
+    padding: 5px 0 5px 20px;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.tier-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.85em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.tier-foot {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+}
+
+/* Featured tier (Real) */
+.tier-featured {
+    border-color: var(--gold);
+    border-width: 2px;
+}
+
+.tier-featured .tier-glyph {
+    text-shadow: 2px 2px 0 rgba(191, 159, 46, 0.85);
+}
+
+/* Complex: a slim row under the two main tiers */
+.tier-complex {
+    max-width: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+    margin: 24px auto 0;
+    padding: 20px 26px;
+}
+
+.tier-complex .tier-glyph {
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.tier-complex-body {
+    flex: 1;
+}
+
+.tier-complex .tier-blurb {
+    margin: 0;
+}
+
+.tier-price-contact {
+    margin: 0;
 }
 
 .tier-price-contact a {
     display: inline-block;
-    background-color: #0f4c81;
-    color: #f4f4f8;
+    background-color: var(--blue);
+    color: var(--on-dark);
     text-decoration: none;
+    font-weight: 700;
     padding: 10px 22px;
     font-size: 1rem;
     border-radius: 5px;
+    white-space: nowrap;
     transition: background-color 0.2s;
 }
 
 .tier-price-contact a:hover {
-    background-color: #0a3559;
+    background-color: var(--blue-dark);
 }
 
-/* Featured (middle) tier */
-.tier-featured {
-    border-color: #0f4c81;
-    border-width: 2px;
-    position: relative;
+.tiers-fine {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 22px auto 0;
 }
 
-.tier-featured .tier-glyph {
-    color: #0f4c81;
-    text-shadow: 2px 2px 0 rgba(234, 213, 83, 0.85);
+@media (max-width: 560px) {
+    .tier-complex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }
 
 /* ===== Narrative scenes (questions / live data / answers) ===== */
-.scene {
-    max-width: 920px;
-    margin: 8px auto;
-    padding: 18px 20px;
-}
-
-.scene-caption {
-    text-align: center;
-    font-size: 1.15rem;
-    line-height: 1.5;
-    color: #09090A;
-    max-width: 640px;
-    margin: 0 auto 24px;
-}
-
 .scene-stage {
     display: flex;
     align-items: center;
@@ -432,18 +495,6 @@ hr {
     display: block;
 }
 
-.engine-label {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: #f4f4f8;
-    background: #0f4c81;
-    border-radius: 5px;
-    padding: 4px 12px;
-    margin-top: -6px;
-}
-
 .bubbles {
     flex: 1 1 380px;
     max-width: 470px;
@@ -453,27 +504,27 @@ hr {
 }
 
 .bubble {
-    background: #fff;
-    border: 1px solid #c9ccd2;
-    border-left: 3px solid #EAD553;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-left: 3px solid var(--gold);
     border-radius: 0;
     padding: 16px 18px;
     box-shadow: none;
 }
 
 .bubble.answer {
-    border-left-color: #0f4c81;
+    border-left-color: var(--blue);
 }
 
 .bubble-text {
     font-size: 1.05rem;
     line-height: 1.5;
     margin: 0;
-    color: #333;
+    color: var(--text);
 }
 
 .bubble-text strong {
-    color: #0f4c81;
+    color: var(--blue);
 }
 
 .uchart {
@@ -486,7 +537,7 @@ hr {
 
 .uchart-cap {
     font-size: 0.8rem;
-    color: #777;
+    color: var(--muted);
     margin: 0;
 }
 
@@ -501,21 +552,21 @@ hr {
     font-weight: 600;
     padding: 5px 16px;
     border-radius: 2px;
-    background: #0f4c81;
-    color: #f4f4f8;
+    background: var(--blue);
+    color: var(--on-dark);
     cursor: pointer;
 }
 
 .chip.ghost {
     background: transparent;
-    color: #0f4c81;
-    border: 1px solid #0f4c81;
+    color: var(--blue);
+    border: 1px solid var(--blue);
 }
 
 .bubble-note {
     font-size: 0.92rem;
     font-style: italic;
-    color: #666;
+    color: var(--muted);
     margin: 12px 0 0;
 }
 
@@ -527,8 +578,8 @@ hr {
     display: inline-block;
     margin-top: 14px;
     font-size: 0.9rem;
-    font-weight: 600;
-    color: #0f4c81;
+    font-weight: 700;
+    color: var(--blue);
     cursor: pointer;
 }
 
@@ -540,14 +591,15 @@ hr {
     display: flex;
     gap: 22px;
     flex-wrap: wrap;
-    margin: 14px 0 2px;
+    margin: 14px 0 6px;
 }
 
 .stat .v {
     display: block;
+    font-family: var(--font-head);
     font-size: 1.15rem;
     font-weight: 700;
-    color: #0f4c81;
+    color: var(--blue);
 }
 
 .stat .k {
@@ -555,7 +607,7 @@ hr {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: #777;
+    color: var(--muted);
 }
 
 /* Live-data scene */
@@ -567,17 +619,7 @@ hr {
     margin: 0 auto;
 }
 
-/* ===== Walkthrough stepper ===== */
-.intro-lead {
-    max-width: 720px;
-    margin: 8px auto 22px;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 1.15rem;
-    line-height: 1.6;
-    color: #333;
-}
-
+/* ===== Walkthrough carousel ===== */
 .walkthrough {
     max-width: 920px;
     margin: 0 auto 8px;
@@ -592,15 +634,17 @@ hr {
 }
 
 .step-tab {
+    position: relative;
+    overflow: hidden;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: inherit;
+    font-family: var(--font-head);
     font-size: 0.98rem;
-    font-weight: 600;
-    color: #0f4c81;
-    background: #fff;
-    border: 1px solid #c9ccd2;
+    font-weight: 700;
+    color: var(--blue);
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
     border-radius: 2px;
     padding: 9px 16px;
     cursor: pointer;
@@ -608,7 +652,7 @@ hr {
 }
 
 .step-tab:hover {
-    border-color: #0f4c81;
+    border-color: var(--blue);
 }
 
 .step-tab .step-num {
@@ -618,43 +662,91 @@ hr {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #eef1f5;
-    color: #0f4c81;
+    background: var(--tint);
+    color: var(--blue);
     font-size: 0.78rem;
     font-weight: 700;
 }
 
 .step-tab.active {
-    background: #0f4c81;
-    color: #f4f4f8;
-    border-color: #0f4c81;
+    background: var(--blue);
+    color: var(--on-dark);
+    border-color: var(--blue);
 }
 
 .step-tab.active .step-num {
-    background: #EAD553;
-    color: #09090A;
+    background: var(--gold);
+    color: var(--char);
 }
 
+/* Progress bar along the bottom of the active tab. Its animation ending
+   is what advances the slideshow (see index.html). */
+.step-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.autoplay .step-tab.active .step-progress {
+    animation: stepFill 8s linear forwards;
+}
+
+.autoplay .step-tab[data-step="0"].active .step-progress {
+    animation-duration: 10s;
+}
+
+/* Hold while the reader is pointing at it, tabbing through it, or it's off screen. */
+.walkthrough.offscreen .step-progress,
+.walkthrough:hover .step-progress,
+.walkthrough:has(:focus-visible) .step-progress {
+    animation-play-state: paused;
+}
+
+@keyframes stepFill {
+    to { transform: scaleX(1); }
+}
+
+/* Panels share one grid cell so the box keeps the height of the tallest
+   panel and the page doesn't jump as the slideshow advances. */
 .step-panels {
-    border: 1px solid #e3e5ea;
+    display: grid;
+    border: 1px solid var(--line);
+    background: var(--surface);
     border-radius: 2px;
     margin-top: 14px;
     padding: 24px 20px 12px;
 }
 
 .step-panel {
-    display: none;
+    grid-area: 1 / 1;
+    align-self: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.45s ease, visibility 0s linear 0.45s;
 }
 
 .step-panel.active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.45s ease, visibility 0s;
+}
+
+/* Bubbles replay their entrance each time their panel comes up. */
+.in-view .step-panel:not(.active) .reveal {
+    animation: none;
+    opacity: 0;
 }
 
 .step-caption {
     text-align: center;
     font-size: 1.12rem;
     line-height: 1.5;
-    color: #09090A;
+    color: var(--char);
     max-width: 660px;
     margin: 0 auto 18px;
 }
@@ -675,42 +767,35 @@ hr {
 .step-controls {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
+    gap: 10px;
+    margin-top: 14px;
 }
 
 .step-prev,
-.step-next {
-    font-family: inherit;
+.step-next,
+.step-play {
+    font-family: var(--font-body);
     font-size: 0.92rem;
-    font-weight: 600;
-    color: #0f4c81;
-    background: #fff;
-    border: 1px solid #0f4c81;
+    font-weight: 700;
+    color: var(--blue);
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
     border-radius: 2px;
-    padding: 8px 18px;
+    padding: 7px 16px;
+    min-width: 44px;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s, opacity 0.2s;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.step-next {
-    background: #0f4c81;
-    color: #f4f4f8;
+.step-play {
+    min-width: 76px;
 }
 
-.step-prev:hover {
-    background: #eef1f5;
-}
-
-.step-next:hover {
-    background: #0a3559;
-}
-
-.step-prev[disabled],
-.step-next[disabled] {
-    opacity: 0.35;
-    cursor: default;
-    pointer-events: none;
+.step-prev:hover,
+.step-next:hover,
+.step-play:hover {
+    border-color: var(--blue);
+    background: var(--tint);
 }
 
 /* ===== Closing principles ===== */
@@ -722,10 +807,14 @@ hr {
 }
 
 .principles p {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     line-height: 1.7;
-    color: #333;
+    color: var(--text);
     margin: 0 0 16px;
+}
+
+.principles strong {
+    color: var(--blue);
 }
 
 .question-ladder {
@@ -737,12 +826,12 @@ hr {
 }
 
 .question-ladder li {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     line-height: 1.5;
-    color: #09090A;
+    color: var(--char);
     padding: 8px 0 8px 28px;
     position: relative;
-    border-bottom: 1px solid #ececf1;
+    border-bottom: 1px solid var(--line);
 }
 
 .question-ladder li:last-child {
@@ -753,17 +842,8 @@ hr {
     content: "\2192";  /* → */
     position: absolute;
     left: 0;
-    color: #EAD553;
+    color: var(--gold);
     font-weight: 700;
-}
-
-/* Flowchart scene */
-.flow-svg {
-    display: block;
-    width: 100%;
-    max-width: 760px;
-    height: auto;
-    margin: 0 auto;
 }
 
 /* ===== Scroll-reveal animation ===== */
@@ -781,40 +861,51 @@ hr {
     to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.flow-line {
-    stroke-dasharray: 320;
-}
-
-.js .flow-line {
-    stroke-dashoffset: 320;
-}
-
-.in-view .flow-line {
-    animation: flowDraw 0.9s ease forwards 0.35s;
-}
-
-@keyframes flowDraw {
-    to { stroke-dashoffset: 0; }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .js .reveal { opacity: 1; }
     .in-view .reveal { animation: none; }
-    .js .flow-line { stroke-dashoffset: 0; }
-    .in-view .flow-line { animation: none; }
+    .step-panel, .step-panel.active { transition: none; }
 }
 
 /* ===== Footer ===== */
 footer {
-    background-color: #2b2b2b;
-    color: #f4f4f8;
+    background-color: var(--char);
+    color: var(--on-dark);
     text-align: center;
-    padding: 10px 0;
+    padding: 22px 16px;
     margin-top: 30px;
 }
 
 footer p {
     margin: 0;
+}
+
+footer a {
+    color: var(--on-dark);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.foot-who {
+    font-family: var(--font-head);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.foot-tag {
+    margin-top: 4px;
+    font-style: italic;
+    color: var(--on-dark-muted);
+    font-size: 0.9rem;
+}
+
+.foot-copy {
+    margin-top: 10px;
+    font-size: 0.78rem;
+    color: var(--on-dark-muted);
 }
 
 /* ===== Images ===== */
@@ -824,16 +915,12 @@ img {
     margin: 20px 0;
 }
 
-/* ===== Stub / Coming Soon ===== */
-.stub {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.stub p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
+/* ===== Small screens ===== */
+@media (max-width: 560px) {
+    header h1 { font-size: 1.8rem; }
+    .hero-title { font-size: 1.6rem; }
+    .hero img { width: 200px; }
+    .step-tab { padding: 8px 10px; font-size: 0.9rem; }
+    .step-panels { padding: 18px 12px 10px; }
+    .scene-stage .engine-core { display: none; }
 }
